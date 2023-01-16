@@ -214,9 +214,7 @@ $('#share').click(function () {
     }else {
         alert("URL is copied.");
     }
-    
-    
-  });
+});
 
 $(document).ready(function() {
             
@@ -259,6 +257,7 @@ let multiLanguage = {
         markdownEditor:"마크다운 에디터",
         dDayCalc:"D-day 계산기",
         stopWatch:"스톱워치",
+        memo:"메모장",
         // menu explain
         toDoList_explain:"깔끔한 디자인의 To Do 리스트 입니다.",
         simpleCalc_explain:"깔끔한 디자인의 사칙연산 계산기 입니다.",
@@ -268,6 +267,7 @@ let multiLanguage = {
         markdownEditor_explain:"마크다운 에디터로 문장을 편집해 보세요.",
         dDayCalc_explain:"D-day 날짜를 계산해 보세요.",
         stopWatch_explain:"깔끔한 디자인의 스톱워치 입니다.",
+        memo_explain:"간단하게 메모하고 내용을 복사 붙여넣기 하세요.",
         // to do list
         toDoList_plusAdd_text:"+ 추가",
         toDoList_complete_text:"완료",
@@ -312,6 +312,8 @@ let multiLanguage = {
         stopWatch_start_text:"시작",
         stopWatch_stop_text:"중지",
         stopWatch_reset_text:"리셋",
+        // memo
+        memo_copy_text:"복사"
     },
     "en" : {
         msg : "Hello World.",
@@ -326,6 +328,7 @@ let multiLanguage = {
         markdownEditor:"Markdown Editor",
         dDayCalc:"D-day Calculator",
         stopWatch:"Stop Watch",
+        memo:"Notepad",
         // menu explain
         toDoList_explain:"It's a simple design to do list.",
         simpleCalc_explain:"It's a simple design arithmetic calculator.",
@@ -335,6 +338,7 @@ let multiLanguage = {
         markdownEditor_explain:"Edit the sentence with the Mark Down Editor.",
         dDayCalc_explain:"Calculate the D-day date.",
         stopWatch_explain:"It's a simple design stopwatch.",
+        memo_explain:"Simply take a note and copy and paste the contents.",
         // to do list
         toDoList_plusAdd_text:"+ Add",
         toDoList_complete_text:"Check",
@@ -379,6 +383,8 @@ let multiLanguage = {
         stopWatch_start_text:"Start",
         stopWatch_stop_text:"Stop",
         stopWatch_reset_text:"Reset",
+        // memo
+        memo_copy_text:"Copy"
     }
 };
 

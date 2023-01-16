@@ -34,7 +34,7 @@
 
 		<link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.css" />
 		<link rel="stylesheet" href="assets/vendor/magnific-popup/magnific-popup.css" />
-		
+		<link rel="stylesheet" href="assets/vendor/bootstrap-datepicker/css/bootstrap-datepicker3.css" />
 
 		<!-- Specific Page Vendor CSS -->
 		<link rel="stylesheet" href="assets/vendor/jquery-ui/jquery-ui.css" />
@@ -60,7 +60,6 @@
 
 		<!-- Theme Custom CSS -->
 		<link rel="stylesheet" href="assets/stylesheets/theme-custom.css">
-		<link rel="stylesheet" href="assets/vendor/bootstrap-datepicker/css/bootstrap-datepicker.min.css" />
 
 		<!-- Head Libs -->
 		<script src="assets/vendor/modernizr/modernizr.js"></script>
@@ -189,7 +188,7 @@
 											<span data-detect="markdownEditor">Markdown Editor</span>
 										</a>
 									</li>
-									<li class="nav-active">
+									<li>
 										<a href="d-day.html">
 											<i class="fa fa-calendar" aria-hidden="true"></i>
 											<span data-detect="dDayCalc">D-day 계산기</span>
@@ -201,7 +200,7 @@
 											<span data-detect="stopWatch">스톱 워치</span>
 										</a>
 									</li>
-									<li>
+                                    <li class="nav-active">
 										<a href="memo.html">
 											<i class="fa fa-text-width" aria-hidden="true"></i>
 											<span data-detect="memo">메모장</span>
@@ -230,76 +229,13 @@
 
 				<section role="main" class="content-body">
 					<header class="page-header">
-						<h2 data-detect="dDayCalc">D-day 계산기</h2>
+						<h2 data-detect="memo">메모장</h2>
 					</header>
-
-					<div class="form-group">
-						<div class="col-md-6 col-lg-6 col-xl-3">
-							<section class="panel panel-featured-right panel-featured-primary">
-								<div class="panel-body">
-									<div class="widget-summary">
-										<div class="widget-summary-col widget-summary-col-icon">
-											<div class="summary-icon bg-primary">
-												D-
-											</div>
-										</div>
-										<div class="widget-summary-col">
-											<div class="summary" style="margin-top:18px;">
-												<h4 class="title" data-detect="dday_leftDate_text">남은 날짜</h4>
-												<div class="info">
-													<strong class="amount"><span id="leftDate">0</span><span data-detect="dday_day_text">일</span></strong>
-													<span class="text-primary">(<span id="leftHours">0</span><span data-detect="dday_time_text">시간</span>)</span>
-												</div>
-											</div>
-											
-										</div>
-									</div>
-								</div>
-							</section>
-						</div>
-					</div>
-					<div class="form-group">
-						<div class="col-md-6 col-lg-6 col-xl-3">
-							<label class="control-label" data-detect="dday_includeStartDate_text">시작일 포함</label>
-							<div class="">
-								<div class="radio-custom radio-primary">
-									<input name="isTodayAddRadio" type="radio" value="y" required="" aria-required="true" checked>
-									<label for="awesome"  data-detect="dday_include_text">포함</label>
-								</div>
-								<div class="radio-custom radio-primary">
-									<input name="isTodayAddRadio" type="radio" value="n">
-									<label for="very-awesome" data-detect="dday_exclude_text">미포함</label>
-								</div>
-							</div>
-						</div>
-					</div>			
-					<div class="form-group">
-						<div class="col-md-6 col-lg-6 col-xl-3">
-							<label class="control-label" data-detect="dday_startDate_text">시작일</label>
-							<div class="">
-								<div class="input-group">
-									<span class="input-group-addon">
-										<i class="fa fa-calendar"></i>
-									</span>
-									<input type="text" id="startDate" class="date form-control" data-date-format="yyyy-mm-dd">
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="form-group">
-						<div class="col-md-6 col-lg-6 col-xl-3">
-							<label class="control-label" data-detect="dday_endDate_text">종료일</label>
-							<div class="">
-								<div class="input-group">
-									<span class="input-group-addon">
-										<i class="fa fa-calendar"></i>
-									</span>
-									<input type="text" id="endDate" class="date form-control" data-date-format="yyyy-mm-dd">
-								</div>
-							</div>
-						</div>
-					</div>
-							
+                    <div class="col-md-10">
+                        <span class="btn-success form-control col-md-5" type="button" id="copyBtn" data-detect="memo_copy_text"
+                        style="text-align: center;">복사</span>
+                        <textarea class="form-control" id="textArea" rows="25" placeholder="input.." style="width:100%;"></textarea>
+                    </div>
 				</section>
 			</div>
 		</section>
@@ -348,80 +284,16 @@
 		<!-- Theme Initialization Files -->
 		<script src="assets/javascripts/theme.init.js"></script>
 
-		<!-- Examples -->
-		<script src="assets/javascripts/forms/examples.advanced.form.js"></script>
-		<script>
-
-			$(document).ready(function() {
-				
-				var today = new Date();
-				var addDate = new Date();
-				addDate.setDate(today.getDate() + 180);
-				// $('#startDate').datepicker('update', today);
-				// $('#endDate').datepicker('update', addDate);
-				$("#startDate").datepicker();
-				$("#endDate").datepicker();
-				$('#startDate').datepicker({
-					format : 'yyyy-mm-dd', 
-					autoclose: true, 
-					setDate: today, 
-					todayHighlight: true
-				}).datepicker('update', today);
-				$('#endDate').datepicker({
-					format : 'yyyy-mm-dd', 
-					autoclose: true, 
-					setDate: addDate, 
-					todayHighlight: true
-				}).datepicker('update', addDate);
-
-				setDDay();
-			});
-
-			const getDateDiff = (d1, d2) => {
-				const date1 = new Date(d1);
-				const date2 = new Date(d2);
-				
-				const diffDate = date1.getTime() - date2.getTime();
-				
-				return Math.abs(diffDate / (1000 * 60 * 60 * 24)); // 밀리세컨 * 초 * 분 * 시 = 일
-			}
-
-			function setComma(num) {
-				var pattern = /(^[+-]?\d+)(\d{3})/;
-				num += '';
-				while (pattern.test(num)) {
-					num = num.replace(pattern, '$1' + ',' + '$2');
-				}
-				return num;
-			}
-
-			function setDDay() {
-				var startDate = $('#startDate').val();
-				var endDate = $('#endDate').val()
-				var diffDate = getDateDiff(startDate, endDate);
-				
-				if($("input[name=isTodayAddRadio]:checked").val() == 'y') {
-					diffDate = diffDate + 1;
-					$("#leftDate").text(setComma(diffDate));
-					$("#leftHours").text(setComma(diffDate*24));
-				} else {
-					$("#leftDate").text(setComma(diffDate));
-					$("#leftHours").text(setComma(diffDate*24));
-				}
-			}
-
-			$("input[name=isTodayAddRadio]").on('change', function() {
-				setDDay();
-			})
-
-			$("#startDate").on('change', function() {
-				setDDay();
-			})
-
-			$("#endDate").on('change', function() {
-				setDDay();
-			})
-
-		</script>
+        <script>
+            $('#copyBtn').click(function () {
+                $("#textArea").select();
+                document.execCommand('copy');
+                if($("#setLanguage").text() == 'KR') {
+                    alert("메모가 복사되었습니다.");
+                }else {
+                    alert("contents is copied.");
+                }
+            });
+        </script>
 	</body>
 </html>
