@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>http://webtoolz.link/</loc>
+  <lastmod>2023-01-15T17:21:19+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>http://webtoolz.link/index.html</loc>
+  <lastmod>2023-01-15T17:21:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://webtoolz.link/to-do-list.html</loc>
+  <lastmod>2023-01-15T17:21:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://webtoolz.link/calc.html</loc>
+  <lastmod>2023-01-15T17:21:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://webtoolz.link/calc2.html</loc>
+  <lastmod>2023-01-15T17:21:18+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://webtoolz.link/text-count.html</loc>
+  <lastmod>2023-01-15T17:21:16+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://webtoolz.link/color-picker.html</loc>
+  <lastmod>2023-01-15T17:21:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://webtoolz.link/markdown-editor.html</loc>
+  <lastmod>2023-01-15T17:21:20+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://webtoolz.link/d-day.html</loc>
+  <lastmod>2023-01-15T17:21:15+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://webtoolz.link/stop-watch.html</loc>
+  <lastmod>2023-01-15T17:21:20+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
+</urlset>

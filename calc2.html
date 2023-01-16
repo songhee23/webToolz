@@ -1,0 +1,333 @@
+<!doctype html>
+<html class="fixed">
+	<head>
+
+		<!-- Basic -->
+		<meta charset="UTF-8">
+
+		<!-- Primary Meta Tags -->
+		<title>Web Toolz :: 다양한 웹서비스를 제공합니다.</title>
+		<meta name="title" content="Web Toolz :: 다양한 웹서비스를 제공합니다.">
+		<meta name="description" content="To Do 리스트, 사칙연산계산기, 대출이자계산기, 글자 수 세기, Color Picker, 마크다운 에디터, D-day 계산기, 스토워치 서비스를 제공합니다.">
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="http://webtoolz.link/">
+		<meta property="og:title" content="Web Toolz :: 다양한 웹서비스를 제공합니다.">
+		<meta property="og:description" content="To Do 리스트, 사칙연산계산기, 대출이자계산기, 글자 수 세기, Color Picker, 마크다운 에디터, D-day 계산기, 스토워치 서비스를 제공합니다.">
+		<meta property="og:image" content="https://s3.ap-northeast-2.amazonaws.com/webtoolz.link/assets/images/web+toolz.jpg">
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image">
+		<meta property="twitter:url" content="http://webtoolz.link/">
+		<meta property="twitter:title" content="Web Toolz :: 다양한 웹서비스를 제공합니다.">
+		<meta property="twitter:description" content="To Do 리스트, 사칙연산계산기, 대출이자계산기, 글자 수 세기, Color Picker, 마크다운 에디터, D-day 계산기, 스토워치 서비스를 제공합니다.">
+		<meta property="twitter:image" content="https://s3.ap-northeast-2.amazonaws.com/webtoolz.link/assets/images/web+toolz.jpg">
+
+		<meta name="keywords" content="Web Toolz :: 다양한 웹서비스를 제공합니다." />
+
+		<link rel="icon" href="assets/images/favicon.ico">
+		<!-- Mobile Metas -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+		<!-- Web Fonts  -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Shadows+Into+Light" rel="stylesheet" type="text/css">
+
+		<!-- Vendor CSS -->
+		<link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.css" />
+
+		<link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.css" />
+		<link rel="stylesheet" href="assets/vendor/magnific-popup/magnific-popup.css" />
+		<link rel="stylesheet" href="assets/vendor/bootstrap-datepicker/css/bootstrap-datepicker3.css" />
+
+		<!-- Specific Page Vendor CSS -->
+		<link rel="stylesheet" href="assets/vendor/jquery-ui/jquery-ui.css" />
+		<link rel="stylesheet" href="assets/vendor/jquery-ui/jquery-ui.theme.css" />
+		<link rel="stylesheet" href="assets/vendor/bootstrap-multiselect/bootstrap-multiselect.css" />
+		<link rel="stylesheet" href="assets/vendor/morris.js/morris.css" />
+
+		<!-- Theme CSS -->
+		<link rel="stylesheet" href="assets/stylesheets/theme.css" />
+
+		<!-- Skin CSS -->
+		<link rel="stylesheet" href="assets/stylesheets/skins/default.css" />
+
+		<!-- Theme Custom CSS -->
+		<link rel="stylesheet" href="assets/stylesheets/theme-custom.css">
+
+		<!-- Head Libs -->
+		<script src="assets/vendor/modernizr/modernizr.js"></script>
+		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6567981859216815"
+		crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<section class="body">
+
+			<!-- start: header -->
+			<header class="header">
+				<div class="logo-container">
+					<h1 class="logo">
+						Web Toolz
+					</h1>
+					<div class="visible-xs toggle-sidebar-left" data-toggle-class="sidebar-left-opened" data-target="html" data-fire-event="sidebar-left-opened">
+						<i class="fa fa-bars" aria-label="Toggle sidebar"></i>
+					</div>
+				</div>
+			
+				<!-- start: header buttons -->
+				<div class="header-right">
+					<ul class="notifications" style="margin:8px 0px;">
+						<li>
+							<div style="margin-top:5px; display:flex;flex-direction: row-reverse;">
+								<input type="checkbox" id="chageTheme" style="margin: 4px 20px 4px 10px">
+								<span>Dark Mode</span></div>
+						</li>
+						<li>
+							<a id="favorite" href="javascript:;" class="notification-icon">
+								<i class="fa fa-star"></i>
+							</a>
+						</li>
+						<li>
+							<a id="share" href="javascript:;" class="notification-icon">
+								<i class="fa fa-share-alt"></i>
+							</a>
+						</li>
+						<li>
+							<a id="share" href="mailto:goodfriend.3777@gmail.com?subject=Web Toolz에게 바라는 점" class="notification-icon">
+								<i class="fa fa fa-exclamation"></i>
+							</a>
+						</li>
+					</ul>
+					<span class="separator"></span>
+					<div id="userbox" class="userbox">
+						<a href="#" data-toggle="dropdown" aria-expanded="false">
+							<div class="profile-info">
+								<span class="name" id="setLanguage">KR</span>
+							</div>
+							<i class="fa custom-caret"></i>
+						</a>
+						<div class="dropdown-menu">
+							<ul class="list-unstyled">
+								<li class="divider"></li>
+								<li>
+									<a role="menuitem" id="koBtn" data-lang="ko" tabindex="-1" href="javascript:void();">KR</a>
+								</li>
+								<li>
+									<a role="menuitem" id="enBtn" data-lang="en" tabindex="-1" href="javascript:void();">EN</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- end: header buttons -->
+			</header>
+			<!-- end: header -->
+
+			<div class="inner-wrapper">
+				<!-- start: sidebar -->
+				<aside id="sidebar-left" class="sidebar-left">
+				
+					<div class="sidebar-header">
+						<div class="sidebar-title">
+							Navigation
+						</div>
+						<div class="sidebar-toggle hidden-xs" data-toggle-class="sidebar-left-collapsed" data-target="html" data-fire-event="sidebar-left-toggle">
+							<i class="fa fa-bars" aria-label="Toggle sidebar"></i>
+						</div>
+					</div>
+				
+					<div class="nano">
+						<div class="nano-content">
+							<nav id="menu" class="nav-main" role="navigation">
+								<ul class="nav nav-main">
+									<li>
+										<a href="index.html">
+											<i class="fa fa-home" aria-hidden="true"></i>
+											<span>home</span>
+										</a>
+									</li>
+									<li>
+										<a href="to-do-list.html">
+											<i class="fa fa-check-square-o" aria-hidden="true"></i>
+											<span data-detect="toDoList">To Do 리스트</span>
+										</a>
+									</li>
+                                    <li>
+										<a href="calc.html">
+											<i class="fa fa-calculator" aria-hidden="true"></i>
+											<span data-detect="simpleCalc">사칙연산 계산기</span>
+										</a>
+									</li>
+                                    <li class="nav-active">
+										<a href="calc2.html">
+											<i class="fa fa-calculator" aria-hidden="true"></i>
+											<span data-detect="loanInterestCalc">대출이자 계산기</span>
+										</a>
+									</li>
+									<li>
+										<a href="text-count.html">
+											<i class="fa fa-align-left" aria-hidden="true"></i>
+											<span data-detect="countText">글자 수 세기</span>
+										</a>
+									</li>
+									<li>
+										<a href="color-picker.html">
+											<i class="fa fa-eyedropper" aria-hidden="true"></i>
+											<span data-detect="colorPicker">Color Picker</span>
+										</a>
+									</li>
+									<li>
+										<a href="markdown-editor.html">
+											<i class="fa fa-edit" aria-hidden="true"></i>
+											<span data-detect="markdownEditor">Markdown Editor</span>
+										</a>
+									</li>
+									<li>
+										<a href="d-day.html">
+											<i class="fa fa-calendar" aria-hidden="true"></i>
+											<span data-detect="dDayCalc">D-day 계산기</span>
+										</a>
+									</li>
+									<li>
+										<a href="stop-watch.html">
+											<i class="fa fa-clock-o" aria-hidden="true"></i>
+											<span data-detect="stopWatch">스톱 워치</span>
+										</a>
+									</li>
+								</ul>	
+							</nav>
+						</div>
+
+						<script>
+							// Maintain Scroll Position
+							if (typeof localStorage !== 'undefined') {
+								if (localStorage.getItem('sidebar-left-position') !== null) {
+									var initialPosition = localStorage.getItem('sidebar-left-position'),
+										sidebarLeft = document.querySelector('#sidebar-left .nano-content');
+									
+									sidebarLeft.scrollTop = initialPosition;
+								}
+							}
+						</script>
+				
+					</div>
+				
+				</aside>
+				<!-- end: sidebar -->
+
+				<section role="main" class="content-body">
+					<header class="page-header">
+						<h2 data-detect="loanInterestCalc">대출이자 계산기</h2>
+					</header>
+
+					<table class="table">
+						<tbody>
+							<tr>
+								<th scope="row" data-detect="loanCalc_amount_text">대출금</th>
+								<td>
+									<div class="input-group">
+										<input type="text" class="form-control" id="loan">
+										<span  class="input-group-addon" data-detect="loanCalc_won_text">원</span>
+									</div>
+								</td>
+								<td>
+									<div class="btn-group btn-group" role="group">
+										<a type="button" class="btn btn-primary" id="loan-100" data-detect="loanCalc_1000000_text">+1백만</a>
+										<a type="button" class="btn btn-primary" id="loan-1000" data-detect="loanCalc_100000000_text">+1천만</a>
+										<a type="button" class="btn btn-primary" id="loan-10000" data-detect="loanCalc_1000000000_text">+1억</a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row" data-detect="data_interestRate_text">대출금리</th>
+								<td>
+									<div class="input-group">
+										<span class="input-group-addon" data-detect="loanCalc_year_text">연</span>
+										<input type="text" class="form-control" id="interest">
+										<span class="input-group-addon">%</span>
+									</div>
+								</td>
+								<td>
+									<div class="btn-group btn-group" role="group">
+										<a type="button" class="btn btn btn-primary" id="interest-3">3%</a>
+										<a type="button" class="btn tn btn-primary" id="interest-4">4%</a>
+										<a type="button" class="btn tn btn-primary" id="interest-5">5%</a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row" data-detect="loanCalc_loanPeriod_text">대출기간</th>
+								<td>
+									<div class="input-group">
+										<input type="text" class="form-control" id="period">
+										<span class="input-group-addon" data-detect="loanCalc_loanMonth_text">개월</span>
+									</div>
+								</td>
+								<td>
+									<div class="btn-group btn-group" role="group">
+										<a type="button" class="btn btn btn-primary" data-detect="loanCalc_oneYear_text" id="period-1">1년</a>
+										<a type="button" class="btn btn btn-primary" data-detect="loanCalc_threeYear_text" id="period-3">3년</a>
+										<a type="button" class="btn btn btn-primary" data-detect="loanCalc_fiveYear_text" id="period-5">5년</a>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<button type="button" id="calculate" class="btn btn-primary" data-detect="loanCalc_calculate_text">계산하기</button>
+
+					<div id="result"></div>
+                    
+				</section>
+			</div>
+		</section>
+
+		<!-- Vendor -->
+		<script src="assets/vendor/jquery/jquery.js"></script>
+		<script src="assets/vendor/jquery-browser-mobile/jquery.browser.mobile.js"></script>
+		<script src="assets/vendor/bootstrap/js/bootstrap.js"></script>
+		<script src="assets/vendor/nanoscroller/nanoscroller.js"></script>
+		<script src="assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+		<script src="assets/vendor/magnific-popup/jquery.magnific-popup.js"></script>
+		<script src="assets/vendor/jquery-placeholder/jquery-placeholder.js"></script>
+		
+		<!-- Specific Page Vendor -->
+		<script src="assets/vendor/jquery-ui/jquery-ui.js"></script>
+		<script src="assets/vendor/jqueryui-touch-punch/jqueryui-touch-punch.js"></script>
+		<script src="assets/vendor/jquery-appear/jquery-appear.js"></script>
+		<script src="assets/vendor/bootstrap-multiselect/bootstrap-multiselect.js"></script>
+		<script src="assets/vendor/jquery.easy-pie-chart/jquery.easy-pie-chart.js"></script>
+		<script src="assets/vendor/flot/jquery.flot.js"></script>
+		<script src="assets/vendor/flot.tooltip/flot.tooltip.js"></script>
+		<script src="assets/vendor/flot/jquery.flot.pie.js"></script>
+		<script src="assets/vendor/flot/jquery.flot.categories.js"></script>
+		<script src="assets/vendor/flot/jquery.flot.resize.js"></script>
+		<script src="assets/vendor/jquery-sparkline/jquery-sparkline.js"></script>
+		<script src="assets/vendor/raphael/raphael.js"></script>
+		<script src="assets/vendor/morris.js/morris.js"></script>
+		<script src="assets/vendor/gauge/gauge.js"></script>
+		<script src="assets/vendor/snap.svg/snap.svg.js"></script>
+		<script src="assets/vendor/liquid-meter/liquid.meter.js"></script>
+		<script src="assets/vendor/jqvmap/jquery.vmap.js"></script>
+		<script src="assets/vendor/jqvmap/data/jquery.vmap.sampledata.js"></script>
+		<script src="assets/vendor/jqvmap/maps/jquery.vmap.world.js"></script>
+		<script src="assets/vendor/jqvmap/maps/continents/jquery.vmap.africa.js"></script>
+		<script src="assets/vendor/jqvmap/maps/continents/jquery.vmap.asia.js"></script>
+		<script src="assets/vendor/jqvmap/maps/continents/jquery.vmap.australia.js"></script>
+		<script src="assets/vendor/jqvmap/maps/continents/jquery.vmap.europe.js"></script>
+		<script src="assets/vendor/jqvmap/maps/continents/jquery.vmap.north-america.js"></script>
+		<script src="assets/vendor/jqvmap/maps/continents/jquery.vmap.south-america.js"></script>
+		
+		<!-- Theme Base, Components and Settings -->
+		<script src="assets/javascripts/theme.js"></script>
+		
+		<!-- Theme Custom -->
+		<script src="assets/javascripts/theme.custom.js"></script>
+		
+		<!-- Theme Initialization Files -->
+		<script src="assets/javascripts/theme.init.js"></script>
+
+		<!-- Examples -->
+		<script src="assets/javascripts/dashboard/examples.dashboard.js"></script>
+	</body>
+</html>

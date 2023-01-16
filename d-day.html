@@ -1,0 +1,421 @@
+<!doctype html>
+<html class="fixed">
+	<head>
+		<meta charset="UTF-8">
+		<!-- Primary Meta Tags -->
+		<title>Web Toolz :: 다양한 웹서비스를 제공합니다.</title>
+		<meta name="title" content="Web Toolz :: 다양한 웹서비스를 제공합니다.">
+		<meta name="description" content="To Do 리스트, 사칙연산계산기, 대출이자계산기, 글자 수 세기, Color Picker, 마크다운 에디터, D-day 계산기, 스토워치 서비스를 제공합니다.">
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="http://webtoolz.link/">
+		<meta property="og:title" content="Web Toolz :: 다양한 웹서비스를 제공합니다.">
+		<meta property="og:description" content="To Do 리스트, 사칙연산계산기, 대출이자계산기, 글자 수 세기, Color Picker, 마크다운 에디터, D-day 계산기, 스토워치 서비스를 제공합니다.">
+		<meta property="og:image" content="https://s3.ap-northeast-2.amazonaws.com/webtoolz.link/assets/images/web+toolz.jpg">
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image">
+		<meta property="twitter:url" content="http://webtoolz.link/">
+		<meta property="twitter:title" content="Web Toolz :: 다양한 웹서비스를 제공합니다.">
+		<meta property="twitter:description" content="To Do 리스트, 사칙연산계산기, 대출이자계산기, 글자 수 세기, Color Picker, 마크다운 에디터, D-day 계산기, 스토워치 서비스를 제공합니다.">
+		<meta property="twitter:image" content="https://s3.ap-northeast-2.amazonaws.com/webtoolz.link/assets/images/web+toolz.jpg">
+
+		<meta name="keywords" content="Web Toolz :: 다양한 웹서비스를 제공합니다." />
+
+		<!-- Mobile Metas -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="icon" href="assets/images/favicon.ico">
+		<!-- Web Fonts  -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Shadows+Into+Light" rel="stylesheet" type="text/css">
+
+		<!-- Vendor CSS -->
+		<link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.css" />
+
+		<link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.css" />
+		<link rel="stylesheet" href="assets/vendor/magnific-popup/magnific-popup.css" />
+		
+
+		<!-- Specific Page Vendor CSS -->
+		<link rel="stylesheet" href="assets/vendor/jquery-ui/jquery-ui.css" />
+		<link rel="stylesheet" href="assets/vendor/jquery-ui/jquery-ui.theme.css" />
+		<link rel="stylesheet" href="assets/vendor/select2/css/select2.css" />
+		<link rel="stylesheet" href="assets/vendor/select2-bootstrap-theme/select2-bootstrap.min.css" />
+		<link rel="stylesheet" href="assets/vendor/bootstrap-multiselect/bootstrap-multiselect.css" />
+		<link rel="stylesheet" href="assets/vendor/bootstrap-tagsinput/bootstrap-tagsinput.css" />
+		<link rel="stylesheet" href="assets/vendor/bootstrap-colorpicker/css/bootstrap-colorpicker.css" />
+		<link rel="stylesheet" href="assets/vendor/bootstrap-timepicker/css/bootstrap-timepicker.css" />
+		<link rel="stylesheet" href="assets/vendor/dropzone/basic.css" />
+		<link rel="stylesheet" href="assets/vendor/dropzone/dropzone.css" />
+		<link rel="stylesheet" href="assets/vendor/bootstrap-markdown/css/bootstrap-markdown.min.css" />
+		<link rel="stylesheet" href="assets/vendor/summernote/summernote.css" />
+		<link rel="stylesheet" href="assets/vendor/codemirror/lib/codemirror.css" />
+		<link rel="stylesheet" href="assets/vendor/codemirror/theme/monokai.css" />
+
+		<!-- Theme CSS -->
+		<link rel="stylesheet" href="assets/stylesheets/theme.css" />
+
+		<!-- Skin CSS -->
+		<link rel="stylesheet" href="assets/stylesheets/skins/default.css" />
+
+		<!-- Theme Custom CSS -->
+		<link rel="stylesheet" href="assets/stylesheets/theme-custom.css">
+		<link rel="stylesheet" href="assets/vendor/bootstrap-datepicker/css/bootstrap-datepicker.min.css" />
+
+		<!-- Head Libs -->
+		<script src="assets/vendor/modernizr/modernizr.js"></script>
+		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6567981859216815"
+     crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<section class="body">
+
+			<!-- start: header -->
+			<header class="header">
+				<div class="logo-container">
+					<h1 class="logo">
+						Web Toolz
+					</h1>
+					<div class="visible-xs toggle-sidebar-left" data-toggle-class="sidebar-left-opened" data-target="html" data-fire-event="sidebar-left-opened">
+						<i class="fa fa-bars" aria-label="Toggle sidebar"></i>
+					</div>
+				</div>
+			
+				<!-- start: header buttons -->
+				<div class="header-right">
+					<ul class="notifications" style="margin:8px 0px;">
+						<li>
+							<div style="margin-top:5px; display:flex;flex-direction: row-reverse;">
+								<input type="checkbox" id="chageTheme" style="margin: 4px 20px 4px 10px">
+								<span>Dark Mode</span></div>
+						</li>
+						<li>
+							<a id="favorite" href="javascript:;" class="notification-icon">
+								<i class="fa fa-star"></i>
+							</a>
+						</li>
+						<li>
+							<a id="share" href="javascript:;" class="notification-icon">
+								<i class="fa fa-share-alt"></i>
+							</a>
+						</li>
+						<li>
+							<a id="share" href="mailto:goodfriend.3777@gmail.com?subject=Web Toolz에게 바라는 점" class="notification-icon">
+								<i class="fa fa fa-exclamation"></i>
+							</a>
+						</li>
+					</ul>
+					<span class="separator"></span>
+					<div id="userbox" class="userbox">
+						<a href="#" data-toggle="dropdown" aria-expanded="false">
+							<div class="profile-info">
+								<span class="name" id="setLanguage">KR</span>
+							</div>
+							<i class="fa custom-caret"></i>
+						</a>
+						<div class="dropdown-menu">
+							<ul class="list-unstyled">
+								<li class="divider"></li>
+								<li>
+									<a role="menuitem" id="koBtn" data-lang="ko" tabindex="-1" href="javascript:void();">KR</a>
+								</li>
+								<li>
+									<a role="menuitem" id="enBtn" data-lang="en" tabindex="-1" href="javascript:void();">EN</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- end: header buttons -->
+			</header>
+			<!-- end: header -->
+
+			<div class="inner-wrapper">
+				<!-- start: sidebar -->
+				<aside id="sidebar-left" class="sidebar-left">
+				
+					<div class="sidebar-header">
+						<div class="sidebar-title">
+							Navigation
+						</div>
+						<div class="sidebar-toggle hidden-xs" data-toggle-class="sidebar-left-collapsed" data-target="html" data-fire-event="sidebar-left-toggle">
+							<i class="fa fa-bars" aria-label="Toggle sidebar"></i>
+						</div>
+					</div>
+				
+					<div class="nano">
+						<div class="nano-content">
+							<nav id="menu" class="nav-main" role="navigation">
+								<ul class="nav nav-main">
+									<li>
+										<a href="index.html">
+											<i class="fa fa-home" aria-hidden="true"></i>
+											<span>home</span>
+										</a>
+									</li>
+									<li>
+										<a href="to-do-list.html">
+											<i class="fa fa-check-square-o" aria-hidden="true"></i>
+											<span data-detect="toDoList">To Do 리스트</span>
+										</a>
+									</li>
+                                    <li>
+										<a href="calc.html">
+											<i class="fa fa-calculator" aria-hidden="true"></i>
+											<span data-detect="simpleCalc">사칙연산 계산기</span>
+										</a>
+									</li>
+                                    <li>
+										<a href="calc2.html">
+											<i class="fa fa-calculator" aria-hidden="true"></i>
+											<span data-detect="loanInterestCalc">대출이자 계산기</span>
+										</a>
+									</li>
+									<li>
+										<a href="text-count.html">
+											<i class="fa fa-align-left" aria-hidden="true"></i>
+											<span data-detect="countText">글자 수 세기</span>
+										</a>
+									</li>
+									<li>
+										<a href="color-picker.html">
+											<i class="fa fa-eyedropper" aria-hidden="true"></i>
+											<span data-detect="colorPicker">Color Picker</span>
+										</a>
+									</li>
+									<li>
+										<a href="markdown-editor.html">
+											<i class="fa fa-edit" aria-hidden="true"></i>
+											<span data-detect="markdownEditor">Markdown Editor</span>
+										</a>
+									</li>
+									<li class="nav-active">
+										<a href="d-day.html">
+											<i class="fa fa-calendar" aria-hidden="true"></i>
+											<span data-detect="dDayCalc">D-day 계산기</span>
+										</a>
+									</li>
+									<li>
+										<a href="stop-watch.html">
+											<i class="fa fa-clock-o" aria-hidden="true"></i>
+											<span data-detect="stopWatch">스톱 워치</span>
+										</a>
+									</li>
+								</ul>	
+							</nav>
+						</div>
+				
+						<script>
+							// Maintain Scroll Position
+							if (typeof localStorage !== 'undefined') {
+								if (localStorage.getItem('sidebar-left-position') !== null) {
+									var initialPosition = localStorage.getItem('sidebar-left-position'),
+										sidebarLeft = document.querySelector('#sidebar-left .nano-content');
+									
+									sidebarLeft.scrollTop = initialPosition;
+								}
+							}
+						</script>
+				
+					</div>
+				
+				</aside>
+				<!-- end: sidebar -->
+
+				<section role="main" class="content-body">
+					<header class="page-header">
+						<h2 data-detect="dDayCalc">D-day 계산기</h2>
+					</header>
+
+					<div class="form-group">
+						<div class="col-md-6 col-lg-6 col-xl-3">
+							<section class="panel panel-featured-right panel-featured-primary">
+								<div class="panel-body">
+									<div class="widget-summary">
+										<div class="widget-summary-col widget-summary-col-icon">
+											<div class="summary-icon bg-primary">
+												D-
+											</div>
+										</div>
+										<div class="widget-summary-col">
+											<div class="summary" style="margin-top:18px;">
+												<h4 class="title" data-detect="dday_leftDate_text">남은 날짜</h4>
+												<div class="info">
+													<strong class="amount"><span id="leftDate">0</span><span data-detect="dday_day_text">일</span></strong>
+													<span class="text-primary">(<span id="leftHours">0</span><span data-detect="dday_time_text">시간</span>)</span>
+												</div>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+							</section>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-md-6 col-lg-6 col-xl-3">
+							<label class="control-label" data-detect="dday_includeStartDate_text">시작일 포함</label>
+							<div class="">
+								<div class="radio-custom radio-primary">
+									<input name="isTodayAddRadio" type="radio" value="y" required="" aria-required="true" checked>
+									<label for="awesome"  data-detect="dday_include_text">포함</label>
+								</div>
+								<div class="radio-custom radio-primary">
+									<input name="isTodayAddRadio" type="radio" value="n">
+									<label for="very-awesome" data-detect="dday_exclude_text">미포함</label>
+								</div>
+							</div>
+						</div>
+					</div>			
+					<div class="form-group">
+						<div class="col-md-6 col-lg-6 col-xl-3">
+							<label class="control-label" data-detect="dday_startDate_text">시작일</label>
+							<div class="">
+								<div class="input-group">
+									<span class="input-group-addon">
+										<i class="fa fa-calendar"></i>
+									</span>
+									<input type="text" id="startDate" class="date form-control" data-date-format="yyyy-mm-dd">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-md-6 col-lg-6 col-xl-3">
+							<label class="control-label" data-detect="dday_endDate_text">종료일</label>
+							<div class="">
+								<div class="input-group">
+									<span class="input-group-addon">
+										<i class="fa fa-calendar"></i>
+									</span>
+									<input type="text" id="endDate" class="date form-control" data-date-format="yyyy-mm-dd">
+								</div>
+							</div>
+						</div>
+					</div>
+							
+				</section>
+			</div>
+		</section>
+
+		<!-- Vendor -->
+		<script src="assets/vendor/jquery/jquery.js"></script>
+		<script src="assets/vendor/jquery-browser-mobile/jquery.browser.mobile.js"></script>
+		<script src="assets/vendor/bootstrap/js/bootstrap.js"></script>
+		<script src="assets/vendor/nanoscroller/nanoscroller.js"></script>
+		<script src="assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+		<script src="assets/vendor/magnific-popup/jquery.magnific-popup.js"></script>
+		<script src="assets/vendor/jquery-placeholder/jquery-placeholder.js"></script>
+		
+		<!-- Specific Page Vendor -->
+		<script src="assets/vendor/jquery-ui/jquery-ui.js"></script>
+		<script src="assets/vendor/jqueryui-touch-punch/jqueryui-touch-punch.js"></script>
+		<script src="assets/vendor/select2/js/select2.js"></script>
+		<script src="assets/vendor/bootstrap-multiselect/bootstrap-multiselect.js"></script>
+		<script src="assets/vendor/jquery-maskedinput/jquery.maskedinput.js"></script>
+		<script src="assets/vendor/bootstrap-tagsinput/bootstrap-tagsinput.js"></script>
+		<script src="assets/vendor/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script>
+		<script src="assets/vendor/bootstrap-timepicker/bootstrap-timepicker.js"></script>
+		<script src="assets/vendor/fuelux/js/spinner.js"></script>
+		<script src="assets/vendor/dropzone/dropzone.js"></script>
+		<script src="assets/vendor/bootstrap-markdown/js/markdown.js"></script>
+		<script src="assets/vendor/bootstrap-markdown/js/to-markdown.js"></script>
+		<script src="assets/vendor/bootstrap-markdown/js/bootstrap-markdown.js"></script>
+		<script src="assets/vendor/codemirror/lib/codemirror.js"></script>
+		<script src="assets/vendor/codemirror/addon/selection/active-line.js"></script>
+		<script src="assets/vendor/codemirror/addon/edit/matchbrackets.js"></script>
+		<script src="assets/vendor/codemirror/mode/javascript/javascript.js"></script>
+		<script src="assets/vendor/codemirror/mode/xml/xml.js"></script>
+		<script src="assets/vendor/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+		<script src="assets/vendor/codemirror/mode/css/css.js"></script>
+		<script src="assets/vendor/summernote/summernote.js"></script>
+		<script src="assets/vendor/bootstrap-maxlength/bootstrap-maxlength.js"></script>
+		<script src="assets/vendor/ios7-switch/ios7-switch.js"></script>
+		<script src="assets/vendor/bootstrap-confirmation/bootstrap-confirmation.js"></script>
+		
+		<!-- Theme Base, Components and Settings -->
+		<script src="assets/javascripts/theme.js"></script>
+		
+		<!-- Theme Custom -->
+		<script src="assets/javascripts/theme.custom.js"></script>
+		
+		<!-- Theme Initialization Files -->
+		<script src="assets/javascripts/theme.init.js"></script>
+
+		<!-- Examples -->
+		<script src="assets/javascripts/forms/examples.advanced.form.js"></script>
+		<script>
+
+			$(document).ready(function() {
+				
+				var today = new Date();
+				var addDate = new Date();
+				addDate.setDate(today.getDate() + 180);
+				// $('#startDate').datepicker('update', today);
+				// $('#endDate').datepicker('update', addDate);
+				$("#startDate").datepicker();
+				$("#endDate").datepicker();
+				$('#startDate').datepicker({
+					format : 'yyyy-mm-dd', 
+					autoclose: true, 
+					setDate: today, 
+					todayHighlight: true
+				}).datepicker('update', today);
+				$('#endDate').datepicker({
+					format : 'yyyy-mm-dd', 
+					autoclose: true, 
+					setDate: addDate, 
+					todayHighlight: true
+				}).datepicker('update', addDate);
+
+				setDDay();
+			});
+
+			const getDateDiff = (d1, d2) => {
+				const date1 = new Date(d1);
+				const date2 = new Date(d2);
+				
+				const diffDate = date1.getTime() - date2.getTime();
+				
+				return Math.abs(diffDate / (1000 * 60 * 60 * 24)); // 밀리세컨 * 초 * 분 * 시 = 일
+			}
+
+			function setComma(num) {
+				var pattern = /(^[+-]?\d+)(\d{3})/;
+				num += '';
+				while (pattern.test(num)) {
+					num = num.replace(pattern, '$1' + ',' + '$2');
+				}
+				return num;
+			}
+
+			function setDDay() {
+				var startDate = $('#startDate').val();
+				var endDate = $('#endDate').val()
+				var diffDate = getDateDiff(startDate, endDate);
+				
+				if($("input[name=isTodayAddRadio]:checked").val() == 'y') {
+					diffDate = diffDate + 1;
+					$("#leftDate").text(setComma(diffDate));
+					$("#leftHours").text(setComma(diffDate*24));
+				} else {
+					$("#leftDate").text(setComma(diffDate));
+					$("#leftHours").text(setComma(diffDate*24));
+				}
+			}
+
+			$("input[name=isTodayAddRadio]").on('change', function() {
+				setDDay();
+			})
+
+			$("#startDate").on('change', function() {
+				setDDay();
+			})
+
+			$("#endDate").on('change', function() {
+				setDDay();
+			})
+
+		</script>
+	</body>
+</html>
