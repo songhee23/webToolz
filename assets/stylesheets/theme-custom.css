@@ -2,3 +2,10 @@
 .panel-body {
     margin-bottom: 20px;
 }
+
+.search-input {
+    width:70%; 
+    background-color: #282d36; 
+    border-color: #282d36; 
+    color: #EEE;
+}

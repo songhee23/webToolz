@@ -440,3 +440,15 @@ window.onload = () => {
     }
 
 };
+
+// 로고 선택시 홈이동
+$(".logo").click(function () {
+    location.href = "/index.html";
+});
+
+$("#menuSearch").on("keyup", function() {
+    var value = this.value.toLowerCase().trim();
+    $(".nav-main li").show().filter(function() {
+        return $(this).text().toLowerCase().trim().indexOf(value) == -1;
+    }).hide();
+});
