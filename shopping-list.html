@@ -141,7 +141,7 @@
 											<span data-detect="toDoList">To Do 리스트</span>
 										</a>
 									</li>
-									<li>
+                                    <li class="nav-active">
 										<a href="shopping-list.html">
 											<i class="fa fa-check-square-o" aria-hidden="true"></i>
 											<span data-detect="shoppingList">쇼핑 리스트</span>
@@ -159,7 +159,7 @@
 											<span data-detect="loanInterestCalc">대출이자 계산기</span>
 										</a>
 									</li>
-									<li class="nav-active">
+									<li>
 										<a href="text-count.html">
 											<i class="fa fa-align-left" aria-hidden="true"></i>
 											<span data-detect="countText">글자 수 세기</span>
@@ -224,28 +224,36 @@
 
 				<section role="main" class="content-body">
 					<header class="page-header">
-						<h2 data-detect="countText">글자 수 세기</h2>
+						<h2 data-detect="shoppingList">쇼핑 리스트</h2>
 					</header>
-                    <div class="col-md-10">
-						<div>
-                            <div>
-								<span style="font-size:16px;" data-detect="textCounter_withSpace_text">공백 포함 : </span>
-								<span id="withSpaceNum" style="font-size:22px; color: orange; font-weight: bold;">0</span>
-								<span style="font-size:16px;" data-detect="textCounter_characters_text"> 자</span>
+					<div class="col-sm-8">
+						<div class="card" style="border-radius: 15px;">
+						  <div class="card-body p-5">
+							<div class="input-group mb-md">
+								<input type="text" class="form-control" placeholder="To do.. " id="itemText">
+								<span class="input-group-addon btn-success" type="button" id="plus" data-detect="toDoList_plusAdd_text">+ 추가</span>
 							</div>
-                            <p></p>
-                            <div>
-								<span style="font-size:16px;" data-detect="textCounter_withoutSpace_text">공백 제외 : </span>
-								<span id="withoutSpaceNum" style="font-size:22px; color: orange; font-weight: bold;">0</span>
-								<span style="font-size:16px;" data-detect="textCounter_characters_text"> 자</span>
-							</div>
-                        </div>
-						<p></p>
-                        <textarea class="form-control" id="content" rows="25" placeholder="input.." style="width:100%;"></textarea>
-                    </div>
+							<ul class="list-group">
+								<li style="height:100%;" class="form-control list-group-item d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2">
+									<div style="display: flex; justify-content: space-between;">
+										<div data-detect="shoppingList_complete_text">구매 완료</div>
+										<div data-detect="shoppingList_item_text">사야 할 것</div>
+										<div data-detect="toDoList_delete_text">삭제</div>
+									</div>
+								</li>
+							</ul>
+							<ul class="list-group" id="itemsUI">
+							</ul>
+							<span class="btn-success form-control col-md-5" type="button" id="copyBtn" data-detect="memo_copy_text"
+                        style="text-align: center;">복사</span>
+						  </div>
+						</div>
+				
+					  </div>
 				</section>
 			</div>
 		</section>
+
 		<!-- Vendor -->
 		<script src="assets/vendor/jquery/jquery.js"></script>
 		<script src="assets/vendor/jquery-browser-mobile/jquery.browser.mobile.js"></script>
@@ -267,7 +275,78 @@
 		<!-- Theme Initialization Files -->
 		<script src="assets/javascripts/theme.init.js"></script>
 
-        <!-- text-count -->
-        <script src="assets/javascripts/text-count.js"></script>
+		<script>
+			$(document).ready(function() {
+				
+				item = localStorage.getItem("item");
+    
+				if (item == null) {
+					item = "";
+				}
+				$("#itemsUI").append(item);
+				
+				$("#plus").on('click', function() {
+					addItem();
+				})
+
+				$("#itemText").on('keyup', function (e) {
+					if ($("#itemText").val() != "" && e.keyCode === 13) {
+						addItem();
+					}
+				});
+			});
+
+			var checkboxChanged = function(obj) {
+				if($(obj).is(":checked")) {
+					$(obj).attr('checked','checked');
+					$(obj).next().css( "text-decoration", "line-through" );
+				} else {
+					$(obj).removeAttr('checked')
+					$(obj).next().css( "text-decoration", "" );
+				}
+				localStorage.setItem("item", $("#itemsUI").html());
+			};
+
+			var deleteItem = function(obj) {
+				$(obj).parent().parent().remove();
+				localStorage.setItem("item", $("#itemsUI").html());
+			};
+
+			function addItem() {
+				var itemText = $("#itemText").val();
+				$("#itemsUI").append("<li style='height: 100%;' class='form-control list-group-item d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2'>"+
+								"<div style='display: flex; justify-content: space-between;''>"+
+								"<input type='checkbox' onchange='checkboxChanged(this)'/>"+
+								"<div style='font-size:16px;' id='toDoTxt' >"+itemText+"</div>"+
+								"<div onclick='deleteItem(this)'><a href='javascript:void(0);' class='panel-action panel-action-dismiss' data-panel-dismiss=''></a></div>"+
+								"</div></li>");
+				$("#itemText").val("");
+
+				localStorage.setItem("item", $("#itemsUI").html());
+			}
+
+			$('#copyBtn').click(function () {
+				var text = "";
+				$('#itemsUI li').each(function (index, item) {
+					if($(item).find('input').is(":checked")) {
+						text += "- [x] ";	
+					} else {
+						text += "- [ ] ";
+					}
+					text += $(item).find('#toDoTxt').text() + "\n"; 
+				});	
+				var textArea = document.createElement("textarea");//textarea 생성
+				textArea.value = text;//textarea에 text 입력
+				document.body.appendChild(textArea); //body에 textarea 추가
+				textArea.select();//선택
+				document.execCommand("Copy");//복사
+				textArea.remove();//생성한 textarea 삭제
+				if($("#setLanguage").text() == 'KR') {
+                    alert("쇼핑 리스트가 복사되었습니다.");
+                }else {
+                    alert("shopping list is copied.");
+                }
+            });
+		</script>
 	</body>
 </html>

@@ -259,6 +259,7 @@ let multiLanguage = {
         stopWatch:"스톱워치",
         memo:"메모장",
         lotto:"로또 번호 생성기",
+        shoppingList:"쇼핑 리스트",
         // menu explain
         toDoList_explain:"깔끔한 디자인의 To Do 리스트 입니다.",
         simpleCalc_explain:"깔끔한 디자인의 사칙연산 계산기 입니다.",
@@ -270,6 +271,7 @@ let multiLanguage = {
         stopWatch_explain:"깔끔한 디자인의 스톱워치 입니다.",
         memo_explain:"간단하게 메모하고 내용을 복사 붙여넣기 하세요.",
         lotto_explain:"1~45개 숫자에서 6개의 로또 번호를 뽑아줍니다.",
+        shoppingList_explain:"쇼핑 리스트를 관리해 보세요.",
         // to do list
         toDoList_plusAdd_text:"+ 추가",
         toDoList_complete_text:"완료",
@@ -317,7 +319,10 @@ let multiLanguage = {
         // memo
         memo_copy_text:"복사",
         // lotto
-        lotto_getNumber_text:"다시뽑기"
+        lotto_getNumber_text:"다시뽑기",
+        // shopping list
+        shoppingList_complete_text:"구매 완료",
+        shoppingList_item_text:"사야 할 것",
     },
     "en" : {
         msg : "Hello World.",
@@ -334,6 +339,7 @@ let multiLanguage = {
         stopWatch:"Stop Watch",
         memo:"Notepad",
         lotto:"Lotto Generator",
+        shoppingList:"Shopping List",
         // menu explain
         toDoList_explain:"It's a simple design to do list.",
         simpleCalc_explain:"It's a simple design arithmetic calculator.",
@@ -345,6 +351,7 @@ let multiLanguage = {
         stopWatch_explain:"It's a simple design stopwatch.",
         memo_explain:"Simply take a note and copy and paste the contents.",
         lotto_explain:"Generate 6 lottery numbers from 1 to 45 numbers.",
+        shoppingList_explain:"Manage your shopping list.",
         // to do list
         toDoList_plusAdd_text:"+ Add",
         toDoList_complete_text:"Check",
@@ -392,7 +399,10 @@ let multiLanguage = {
         // memo
         memo_copy_text:"Copy",
         // lotto
-        lotto_getNumber_text:"Retry"
+        lotto_getNumber_text:"Retry",
+        // shopping list
+        shoppingList_complete_text:"Complete",
+        shoppingList_item_text:"Things to buy",
     }
 };
 
