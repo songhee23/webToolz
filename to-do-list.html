@@ -237,6 +237,8 @@
 							</ul>
 							<ul class="list-group" id="todoUl">
 							</ul>
+							<span class="btn-success form-control col-md-5" type="button" id="copyBtn" data-detect="memo_copy_text"
+                        style="text-align: center;">복사</span>
 						  </div>
 						</div>
 				
@@ -308,7 +310,7 @@
 				$("#todoUl").append("<li style='height: 100%;' class='form-control list-group-item d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2'>"+
 								"<div style='display: flex; justify-content: space-between;''>"+
 								"<input type='checkbox' onchange='checkboxChanged(this)'/>"+
-								"<div font-size:16px;'>"+toDoText+"</div>"+
+								"<div style='font-size:16px;' id='toDoTxt' >"+toDoText+"</div>"+
 								"<div onclick='deleteItem(this)'><a href='javascript:void(0);' class='panel-action panel-action-dismiss' data-panel-dismiss=''></a></div>"+
 								"</div></li>");
 				$("#todoText").val("");
@@ -316,7 +318,28 @@
 				localStorage.setItem("todo", $("#todoUl").html());
 			}
 
-
+			$('#copyBtn').click(function () {
+				var text = "";
+				$('#todoUl li').each(function (index, item) {
+					if($(item).find('input').is(":checked")) {
+						text += "- [ ] ";
+					} else {
+						text += "- [x] ";	
+					}
+					text += $(item).find('#toDoTxt').text() + "\n"; 
+				});	
+				var textArea = document.createElement("textarea");//textarea 생성
+				textArea.value = text;//textarea에 text 입력
+				document.body.appendChild(textArea); //body에 textarea 추가
+				textArea.select();//선택
+				document.execCommand("Copy");//복사
+				textArea.remove();//생성한 textarea 삭제
+				if($("#setLanguage").text() == 'KR') {
+                    alert("To Do 리스트가 복사되었습니다.");
+                }else {
+                    alert("to do list is copied.");
+                }
+            });
 		</script>
 	</body>
 </html>
