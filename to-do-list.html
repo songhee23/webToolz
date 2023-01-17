@@ -322,9 +322,9 @@
 				var text = "";
 				$('#todoUl li').each(function (index, item) {
 					if($(item).find('input').is(":checked")) {
-						text += "- [ ] ";
-					} else {
 						text += "- [x] ";	
+					} else {
+						text += "- [ ] ";
 					}
 					text += $(item).find('#toDoTxt').text() + "\n"; 
 				});	
