@@ -168,7 +168,7 @@ $(document).ready(function() {
     });
 });
 
-
+// header > 즐겨찾기 추가 버튼
 $('#favorite').on('click', function(e) {
     var bookmarkURL = window.location.href;
     var bookmarkTitle = document.title;
@@ -200,15 +200,14 @@ $('#favorite').on('click', function(e) {
     return triggerDefault;
 });
 
+// header > URL 공유하기 버튼
 $('#share').click(function () {
-
     var textArea = document.createElement("textarea");//textarea 생성
     textArea.value = window.document.location.href;//textarea에 url 입력
     document.body.appendChild(textArea); //body에 textarea 추가
     textArea.select();//선택
     document.execCommand("Copy");//복사
     textArea.remove();//생성한 textarea 삭제
-
     if($("#setLanguage").text() == 'KR') {
         alert("URL이 복사되었습니다.");
     }else {
@@ -216,20 +215,7 @@ $('#share').click(function () {
     }
 });
 
-$(document).ready(function() {
-            
-    isBlackMode = localStorage.getItem("isBlackMode");
-
-    if (isBlackMode == null) {
-       return;
-    } 
-    if(isBlackMode == "y") {
-        $(".fixed").addClass("dark");
-        $(".flexbox").addClass("dark");
-        $("#chageTheme").prop('checked', true);
-    }
-})
-
+// 다크모드 체크박스 theme 핸들링
 $("#chageTheme").change(function() {
     if(this.checked) {
         localStorage.setItem("isBlackMode", "y");
@@ -242,7 +228,7 @@ $("#chageTheme").change(function() {
     }
 });
 
-// 다국어 언어 예시.
+// 다국어 언어
 let multiLanguage = {
     "ko" : {
         msg : "안녕하세요.",
@@ -260,6 +246,7 @@ let multiLanguage = {
         memo:"메모장",
         lotto:"로또 번호 생성기",
         shoppingList:"쇼핑 리스트",
+        regex:"정규식 테스트",
         // menu explain
         toDoList_explain:"깔끔한 디자인의 To Do 리스트 입니다.",
         simpleCalc_explain:"깔끔한 디자인의 사칙연산 계산기 입니다.",
@@ -272,6 +259,7 @@ let multiLanguage = {
         memo_explain:"간단하게 메모하고 내용을 복사 붙여넣기 하세요.",
         lotto_explain:"1~45개 숫자에서 6개의 로또 번호를 뽑아줍니다.",
         shoppingList_explain:"쇼핑 리스트를 관리해 보세요.",
+        regex_explain:"정규식을 테스트해보세요.",
         // to do list
         toDoList_plusAdd_text:"+ 추가",
         toDoList_complete_text:"완료",
@@ -323,6 +311,13 @@ let multiLanguage = {
         // shopping list
         shoppingList_complete_text:"구매 완료",
         shoppingList_item_text:"사야 할 것",
+        // regEx test
+        regex_regex_text:"정규 표현식",
+        regex_apply_text:"적용",
+        regex_subject_text:"대상 텍스트",
+        regex_result_text:"결과",
+        regex_seperator_text:"구분자",
+        regex_testResult_text:"테스트 결과 : ",
     },
     "en" : {
         msg : "Hello World.",
@@ -340,6 +335,7 @@ let multiLanguage = {
         memo:"Notepad",
         lotto:"Lotto Generator",
         shoppingList:"Shopping List",
+        regex:"regEx Test",
         // menu explain
         toDoList_explain:"It's a simple design to do list.",
         simpleCalc_explain:"It's a simple design arithmetic calculator.",
@@ -352,6 +348,7 @@ let multiLanguage = {
         memo_explain:"Simply take a note and copy and paste the contents.",
         lotto_explain:"Generate 6 lottery numbers from 1 to 45 numbers.",
         shoppingList_explain:"Manage your shopping list.",
+        regex_explain:"Test your regular expression.",
         // to do list
         toDoList_plusAdd_text:"+ Add",
         toDoList_complete_text:"Check",
@@ -403,6 +400,14 @@ let multiLanguage = {
         // shopping list
         shoppingList_complete_text:"Complete",
         shoppingList_item_text:"Things to buy",
+        // regEx test
+        regex_regex_text:"Regular Expression",
+        regex_apply_text:"Apply",
+        regex_subject_text:"Target Text",
+        regex_result_text:"Result",
+        regex_seperator_text:"Seperator",
+        regex_testResult_text:"Test Result : ",
+        
     }
 };
 
@@ -435,8 +440,9 @@ window.onload = () => {
         localStorage.setItem("language", "en");
     });
 
-    var userLang = navigator.language || navigator.userLanguage;
-    var userSetLang = localStorage.getItem("language");
+    // 한국어/영어 세팅(초기화)
+    var userLang = navigator.language || navigator.userLanguage; // 내비게이터 언어
+    var userSetLang = localStorage.getItem("language"); // 사용자 세팅 언어
     if(userSetLang != null) {
         if (userSetLang == 'ko') {
             setLanguage('ko');
@@ -449,6 +455,17 @@ window.onload = () => {
         setLanguage('en');
     }
 
+    // theme 시팅(초기화)
+    isBlackMode = localStorage.getItem("isBlackMode");
+    if (isBlackMode == null) {
+        return;
+    } 
+    if(isBlackMode == "y") {
+        $(".fixed").addClass("dark");
+        $(".flexbox").addClass("dark");
+        $("#chageTheme").prop('checked', true);
+    }
+    
 };
 
 // 로고 선택시 홈이동
@@ -456,6 +473,7 @@ $(".logo").click(function () {
     location.href = "/index.html";
 });
 
+// 메뉴 검색 input 입력시 > 메뉴 검색
 $("#menuSearch").on("keyup", function() {
     var value = this.value.toLowerCase().trim();
     $(".nav-main li").show().filter(function() {

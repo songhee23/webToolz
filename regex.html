@@ -45,10 +45,8 @@
 		<link rel="stylesheet" href="assets/stylesheets/theme-custom.css">
 		<!-- Head Libs -->
 		<script src="assets/vendor/modernizr/modernizr.js"></script>
-		
 		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6567981859216815"
      crossorigin="anonymous"></script>
-
 	</head>
 	<body>
 		<section class="body">
@@ -185,13 +183,13 @@
 											<span data-detect="dDayCalc">D-day 계산기</span>
 										</a>
 									</li>
-									<li class="nav-active">
+									<li>
 										<a href="stop-watch.html">
 											<i class="fa fa-clock-o" aria-hidden="true"></i>
 											<span data-detect="stopWatch">스톱 워치</span>
 										</a>
 									</li>
-									<li>
+                                    <li>
 										<a href="memo.html">
 											<i class="fa fa-text-width" aria-hidden="true"></i>
 											<span data-detect="memo">메모장</span>
@@ -203,7 +201,7 @@
 											<span data-detect="lotto">로또 번호 생성기</span>
 										</a>
 									</li>
-									<li>
+									<li class="nav-active">
 										<a href="regex.html">
 											<i class="fa fa-asterisk" aria-hidden="true"></i>
 											<span data-detect="regex">정규식 테스트</span>
@@ -212,7 +210,7 @@
 								</ul>	
 							</nav>
 						</div>
-
+				
 						<script>
 							// Maintain Scroll Position
 							if (typeof localStorage !== 'undefined') {
@@ -229,22 +227,35 @@
 				
 				</aside>
 				<!-- end: sidebar -->
-
 				<section role="main" class="content-body">
 					<header class="page-header">
-						<h2 data-detect="stopWatch">스톱워치</h2>
+						<h2 data-detect="regex">정규식 테스트</h2>
 					</header>
-                    <div class="col-sm-4" style="border-radius: 15px; text-align: center; border: 3px solid;">
-                        <div>
-                            <hr/>
-                            <p style=" font-size: 38px;" id="stopwatch">00:00:00</p>
-							<hr/>
-                            <div>
-                                <button type="button" onclick="startClock()" class="mb-xs mt-xs mr-xs btn btn-primary"><i class="fa fa-play" aria-hidden="true"></i> <span data-detect="stopWatch_start_text">Start</span></button>
-                                <button type="button" onclick="stopClock()" class="mb-xs mt-xs mr-xs btn btn-danger"><i class="fa fa-pause" aria-hidden="true"></i> <span data-detect="stopWatch_stop_text">Stop</span></button>
-                                <button type="button" onclick="resetClock()" class="mb-xs mt-xs mr-xs btn btn-success"><i class="fa fa-hourglass-o" aria-hidden="true"></i> <span data-detect="stopWatch_reset_text">Reset</span></button>
-                            </div>
-                            <hr/>
+                    <div class="col-sm-8">
+                        <div class="row">
+							<div class="col-sm-6">
+								<div class="form-group">
+									<label class="control-label" data-detect="regex_regex_text">정규 표현식</label>
+									<input type="text" class="form-control" id="regexPattern" value="/[a-z]/g">
+									<label class="control-label" data-detect="regex_seperator_text">구분자</label>
+									<input type="text" class="form-control" id="seperator" value=", ">
+									<span class="input-group-addon btn-success" type="button" id="applyBtn" data-detect="regex_apply_text">적용</span>
+								</div>
+								<hr/>
+								<div class="form-group">
+									<label class="control-label" data-detect="regex_subject_text">대상 텍스트</label>
+                                    <textarea class="form-control" id="text" rows="10" placeholder="input.." style="width:100%;">정규 표현식(正規表現式, 영어: regular expression, 간단히 regexp[1] 또는 regex, rational expression)[2][3] 또는 정규식(正規式)은 특정한 규칙을 가진 문자열의 집합을 표현하는 데 사용하는 형식 언어이다. 정규 표현식은 많은 텍스트 편집기와 프로그래밍 언어에서 문자열의 검색과 치환을 위해 지원하고 있으며, 특히 펄과 Tcl은 언어 자체에 강력한 정규 표현식을 구현하고 있다.
+컴퓨터 과학의 정규 언어로부터 유래하였으나 구현체에 따라서 정규 언어보다 더 넓은 언어를 표현할 수 있는 경우도 있으며, 심지어 정규 표현식 자체의 문법도 여러 가지 존재하고 있다. 현재 많은 프로그래밍 언어, 텍스트 처리 프로그램, 고급 텍스트 편집기 등이 정규 표현식 기능을 제공한다. 일부는 펄, 자바스크립트, 루비, Tcl처럼 문법에 내장되어 있는 반면 닷넷 언어, 자바, 파이썬, POSIX C, C++ (C++11 이후)에서는 표준 라이브러리를 통해 제공한다. 그 밖의 대부분의 언어들은 별도의 라이브러리를 통해 정규 표현식을 제공한다.
+정규 표현식은 검색 엔진, 워드 프로세서와 문서 편집기의 찾아 바꾸기 대화상자, 그리고 sed, AWK와 같은 문자 처리 유틸리티, 어휘 분석에 사용된다.</textarea>
+								</div>
+								<div class="form-group">
+									<label class="control-label"  data-detect="regex_testResult_text">테스트 결과&nbsp;:</label><span id="regexTest"> </span>
+								</div>
+								<div class="form-group">
+									<label class="control-label" data-detect="regex_result_text">결과</label>
+                                    <textarea class="form-control" id="resultText" readonly="readonly" rows="10" style="width:100%;"></textarea>
+								</div>
+							</div>
 						</div>
                     </div>
 				</section>
@@ -271,48 +282,43 @@
 		
 		<!-- Theme Initialization Files -->
 		<script src="assets/javascripts/theme.init.js"></script>
+
         <script>
-            let timerId;
-            let time = 0;
-            const stopwatch = document.getElementById("stopwatch");
-            let  hour, min, sec;
-
-
-            function printTime() {
-                time++;
-                stopwatch.innerText = getTimeFormatString();
+            const applyRegex = function() {
+                var regex = $("#regexPattern").val();
+                var text = $("#text").val();
+				var testResult = stringToRegex(regex).test(text);
+				$("#regexTest").text(" "+testResult);
+				if(testResult) {
+					$("#regexTest").css("color", "blue");
+				} else {
+					$("#regexTest").css("color", "red");
+				}
+                var result = text.match(stringToRegex(regex));
+                var resultText = "";
+                $(result).each(function (index, item) {
+                    resultText += item + $("#seperator").val();
+                });	
+                $("#resultText").text(resultText);
             }
 
-            //시계 시작 - 재귀호출로 반복실행
-            function startClock() {
-                printTime();
-                stopClock();
-                timerId = setTimeout(startClock, 1000);
+            $(document).ready(function() {
+                applyRegex();
+			});
+
+            const stringToRegex = str => {
+                // Main regex
+                const main = str.match(/\/(.+)\/.*/)[1]
+                // Regex options
+                const options = str.match(/\/.+\/(.*)/)[1]
+                // Compiled regex
+                return new RegExp(main, options)
             }
 
-            //시계 중지
-            function stopClock() {
-                if (timerId != null) {
-                    clearTimeout(timerId);
-                }
-            }
-
-            // 시계 초기화
-            function resetClock() {
-                stopClock()
-                stopwatch.innerText = "00:00:00";
-                time = 0;
-            }
-
-            // 시간(int)을 시, 분, 초 문자열로 변환
-            function getTimeFormatString() {
-                hour = parseInt(String(time / (60 * 60)));
-                min = parseInt(String((time - (hour * 60 * 60)) / 60));
-                sec = time % 60;
-
-                return String(hour).padStart(2, '0') + ":" + String(min).padStart(2, '0') + ":" + String(sec).padStart(2, '0');
-            }
-
+            // 정규식 적용 클릭
+            $("#applyBtn").click(function () {
+                applyRegex();
+            });
         </script>
 	</body>
 </html>
