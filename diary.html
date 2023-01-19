@@ -189,7 +189,7 @@
 											<span data-detect="stopWatch">스톱 워치</span>
 										</a>
 									</li>
-                                    <li class="nav-active">
+                                    <li>
 										<a href="memo.html">
 											<i class="fa fa-text-width" aria-hidden="true"></i>
 											<span data-detect="memo">메모장</span>
@@ -207,7 +207,7 @@
 											<span data-detect="regex">정규식 테스트</span>
 										</a>
 									</li>
-									<li>
+                                    <li class="nav-active">
 										<a href="diary.html">
 											<i class="fa fa-book" aria-hidden="true"></i>
 											<span data-detect="diary">정규식 테스트</span>
@@ -236,12 +236,34 @@
 
 				<section role="main" class="content-body">
 					<header class="page-header">
-						<h2 data-detect="memo">메모장</h2>
+						<h2 data-detect="diary">다이어리</h2>
 					</header>
                     <div class="col-md-10">
-                        <span class="btn-success form-control col-md-5" type="button" id="copyBtn" data-detect="memo_copy_text"
-                        style="text-align: center;">복사</span>
-                        <textarea class="form-control" id="textArea" rows="25" placeholder="input.." style="width:100%;"></textarea>
+                        <div class="col-md">
+                            <div class="form-floating">
+                                <label for="date" data-detect="diary_inputDate_text">오늘 날짜를 입력해 주세요.</label>
+                                <input type="date" class="form-control" id="date">
+                            </div>
+                        </div>
+                        <div class="col-md">
+                            <label data-detect="diary_inputFeeling_text">오늘 기분은 어땠나요?</label>
+                            <div id="emoji"></div>
+                        </div>
+                        <div class="col-md">
+                            <label for="text" data-detect="diary_inputDiary_text">오늘 있었던 일을 기록하세요.</label>
+                            <div class="input-group mb-md">
+								<input type="text" class="form-control" id="text">
+								<span class="input-group-addon btn-success" type="button" id="save" data-detect="toDoList_plusAdd_text">+ 추가</span>
+							</div>
+                            
+                        </div>
+                        
+                        <div class="col-md list-group" id="diaryDiv"></div>
+
+                        <div class="col-md" >
+                            <span class="btn-success form-control col-md-5" type="button" id="copyBtn" data-detect="memo_copy_text" style="margin-bottom: 20px; text-align: center;">복사</span>
+                            <span class="btn-danger form-control col-md-5" type="button" id="deleteBtn" data-detect="toDoList_delete_text" style="text-align: center;">삭제</span>
+                        </div>
                     </div>
 				</section>
 			</div>
@@ -267,17 +289,130 @@
 		
 		<!-- Theme Initialization Files -->
 		<script src="assets/javascripts/theme.init.js"></script>
+        <script src="assets/javascripts/emoji.min.js"></script>
 
         <script>
-            $('#copyBtn').click(function () {
-                $("#textArea").select();
-                document.execCommand('copy');
-                if($("#setLanguage").text() == 'KR') {
-                    alert("메모가 복사되었습니다.");
-                }else {
-                    alert("Contents is copied.");
+            $(document).ready(function() {
+                var emoji = "😐";
+                var emojis = ["😠","😞","😐","😊","😃"];
+                var diary = "";
+                
+                function emojiSelected(event, value) {
+                    if (value == 1) {
+                        emoji = "😠";
+                    } else if (value == 2) {
+                        emoji = "😞";
+                    } else if (value == 3) {
+                        emoji = "😐";
+                    } else if (value == 4) {
+                        emoji = "😊";
+                    } else if (value == 5) {
+                        emoji = "😃";
+                    }
                 }
+
+                function checkThemeForItemColor () {
+                    if($("#chageTheme").prop("checked")) {
+                        // 다이어리 아이템 핸들링
+                        $("#diaryDiv .list-group-item").each(function(index, item){
+                            $(item).css("background-color", "#282d36");
+                        });
+                    } else{
+                        // 다이어리 아이템 핸들링
+                        $("#diaryDiv .list-group-item").each(function(index, item){
+                            $(item).css("background-color", "");
+                        });
+                    }
+                } 
+
+                function saveHandler() {
+                    var date = $("#date").val();
+                    var text = $("#text").val();
+                
+                    if (date == "" || text == "") {
+                        return false;
+                    }
+                
+                    diary = `<a href="#" class="list-group-item list-group-item-action" aria-current="true">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">${text}</h5>
+                            <small class="date">${date}</small>
+                        </div>
+                        <small style='font-size: 20px;' class="emoji">${emoji}</small>
+                        </a>` + diary;
+
+                    if($("#diaryDiv .list-group-item").length > 499) {
+                        if($("#setLanguage").text() == 'KR') {
+                            alert("다이어리를 500개까지 쓸 수 있습니다. 삭제 후 등록해 주세요.");
+                        } else {
+                            alert("You can use up to 500 diaries. Please register after deleting.");
+                        }
+                        return;
+                    }
+
+                    $("#diaryDiv").html(diary);
+                    localStorage.setItem("diary", diary);
+                    checkThemeForItemColor();
+                    $("#text").val("");
+                }
+                
+                $(document).ready(function() {
+                    $("#emoji").emoji({
+                        emojis: emojis,
+                        callback: emojiSelected
+                    });
+                
+                    diary = localStorage.getItem("diary");
+                
+                    if (diary == null) {
+                        diary = "";
+                    }
+                
+                    $("#diaryDiv").html(diary);
+                
+                    $("#save").click(saveHandler);
+
+                    checkThemeForItemColor();
+                });
+
+                $('#copyBtn').click(function () {
+                    
+                    var text = "";
+                    $("#diaryDiv .list-group-item").each(function (index, item) {
+                        var diary = $(item).find('.mb-1').text();
+                        var date = $(item).find('.date').text();
+                        var emoji = $(item).find('.emoji').text();
+                        text += date + " - " + emoji + " - " + diary + "\n"; 
+                    });	
+                    var textArea = document.createElement("textarea");//textarea 생성
+                    textArea.value = text;//textarea에 text 입력
+                    document.body.appendChild(textArea); //body에 textarea 추가
+                    textArea.select();//선택
+                    document.execCommand("Copy");//복사
+                    textArea.remove();//생성한 textarea 삭제
+                    if($("#setLanguage").text() == 'KR') {
+                        alert("다이어리 리스트가 복사되었습니다.");
+                    }else {
+                        alert("Diary list is copied.");
+                    }
+                });
+
+                $('#deleteBtn').click(function () {
+                    var msg = "";
+                    if($("#setLanguage").text() == 'KR') {
+                        msg = "전체 다이어리 리스트가 삭제됩니다. 삭제하시겠습니까?";
+                    } else {
+                        msg = "All diary lists will be deleted. Are you sure you want to delete?";
+                    }
+                    if(confirm(msg) ) {
+                        localStorage.setItem("diary", "");
+                        $("#diaryDiv").html("");
+                    }
+                });
             });
+
+            // 오늘 날짜 세팅
+            document.getElementById('date').valueAsDate = new Date();
         </script>
 	</body>
 </html>

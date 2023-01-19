@@ -221,10 +221,20 @@ $("#chageTheme").change(function() {
         localStorage.setItem("isBlackMode", "y");
         $(".fixed").addClass("dark");
         $(".flexbox").addClass("dark");
+
+        // 다이어리 아이템 핸들링
+        $("#diaryDiv .list-group-item").each(function(index, item){
+            $(item).css("background-color", "#282d36");
+        });
     } else {
         localStorage.removeItem("isBlackMode")
         $(".fixed").removeClass("dark");
         $(".flexbox").removeClass("dark");
+
+        // 다이어리 아이템 핸들링
+        $("#diaryDiv .list-group-item").each(function(index, item){
+            $(item).css("background-color", "");
+        });
     }
 });
 
@@ -247,6 +257,7 @@ let multiLanguage = {
         lotto:"로또 번호 생성기",
         shoppingList:"쇼핑 리스트",
         regex:"정규식 테스트",
+        diary:"일기",
         // menu explain
         toDoList_explain:"깔끔한 디자인의 To Do 리스트 입니다.",
         simpleCalc_explain:"깔끔한 디자인의 사칙연산 계산기 입니다.",
@@ -260,6 +271,7 @@ let multiLanguage = {
         lotto_explain:"1~45개 숫자에서 6개의 로또 번호를 뽑아줍니다.",
         shoppingList_explain:"쇼핑 리스트를 관리해 보세요.",
         regex_explain:"정규식을 테스트해보세요.",
+        diary_explain:"깔끔한 디자인의 심플 다이어리 입니다.",
         // to do list
         toDoList_plusAdd_text:"+ 추가",
         toDoList_complete_text:"완료",
@@ -323,6 +335,10 @@ let multiLanguage = {
         regex_patternExpression_text:"찾을 문자열의 패턴",
         regex_patternEnd_text:"패턴 구분자 끝",
         regex_patternChange_text:"패턴 변경자",
+        // diary
+        diary_inputDate_text:"오늘 날짜를 입력해 주세요.",
+        diary_inputFeeling_text:"오늘 기분은 어땠나요?",
+        diary_inputDiary_text:"오늘 있었던 일을 기록하세요.",
     },
     "en" : {
         msg : "Hello World.",
@@ -340,7 +356,8 @@ let multiLanguage = {
         memo:"Notepad",
         lotto:"Lotto Generator",
         shoppingList:"Shopping List",
-        regex:"regEx Test",
+        regex:"RegEx Test",
+        diary:"Diary",
         // menu explain
         toDoList_explain:"It's a simple design to do list.",
         simpleCalc_explain:"It's a simple design arithmetic calculator.",
@@ -354,6 +371,7 @@ let multiLanguage = {
         lotto_explain:"Generate 6 lottery numbers from 1 to 45 numbers.",
         shoppingList_explain:"Manage your shopping list.",
         regex_explain:"Test your regular expression.",
+        diary_explain:"It's a simple diary.",
         // to do list
         toDoList_plusAdd_text:"+ Add",
         toDoList_complete_text:"Check",
@@ -417,6 +435,10 @@ let multiLanguage = {
         regex_patternExpression_text:"Pattern to find",
         regex_patternEnd_text:"End of pattern separator",
         regex_patternChange_text:"Pattern Changer",
+        // diary
+        diary_inputDate_text:"Please enter today's date.",
+        diary_inputFeeling_text:"How did you feel today?",
+        diary_inputDiary_text:"Record what happened today.",
         
     }
 };
@@ -474,6 +496,9 @@ window.onload = () => {
         $(".fixed").addClass("dark");
         $(".flexbox").addClass("dark");
         $("#chageTheme").prop('checked', true);
+        $("#diaryDiv .list-group-item").each(function(index, item){
+            $(item).css("background-color", "#282d36");
+        });
     }
     
 };
