@@ -318,6 +318,11 @@ let multiLanguage = {
         regex_result_text:"결과",
         regex_seperator_text:"구분자",
         regex_testResult_text:"테스트 결과 : ",
+        regex_rule_text:"정규 표현식 규칙",
+        regex_patternStart_text:"패턴구분자 시작",
+        regex_patternExpression_text:"찾을 문자열의 패턴",
+        regex_patternEnd_text:"패턴 구분자 끝",
+        regex_patternChange_text:"패턴 변경자",
     },
     "en" : {
         msg : "Hello World.",
@@ -407,6 +412,11 @@ let multiLanguage = {
         regex_result_text:"Result",
         regex_seperator_text:"Seperator",
         regex_testResult_text:"Test Result : ",
+        regex_rule_text:"Regular Expression Rule",
+        regex_patternStart_text:"Start pattern separator",
+        regex_patternExpression_text:"Pattern to find",
+        regex_patternEnd_text:"End of pattern separator",
+        regex_patternChange_text:"Pattern Changer",
         
     }
 };

@@ -234,6 +234,23 @@
                     <div class="col-sm-8">
                         <div class="row">
 							<div class="col-sm-6">
+								<label class="control-label" data-detect="regex_rule_text">정규 표현식 규칙</label>
+								<div class="form-group"> <table class="table mb-none" style="text-align:center;">
+									<tbody>
+										<tr>
+											<td>/</td>
+											<td>[a-z]</td>
+											<td>/</td>
+											<td>g</td>
+										</tr>
+										<tr>
+											<td data-detect="regex_patternStart_text">패턴구분자 시작</td>
+											<td data-detect="regex_patternExpression_text">찾을 문자열의 패턴</td>
+											<td data-detect="regex_patternEnd_text">패턴 구분자 끝</td>
+											<td data-detect="regex_patternChange_text">패턴 변경자</td>
+										</tr>
+									</tbody>
+								</table></div>
 								<div class="form-group">
 									<label class="control-label" data-detect="regex_regex_text">정규 표현식</label>
 									<input type="text" class="form-control" id="regexPattern" value="/[a-z]/g">
