@@ -1,6 +1,7 @@
 <!doctype html>
 <html class="fixed">
 	<head>
+		<!-- Basic -->
 		<meta charset="UTF-8">
 		<!-- Primary Meta Tags -->
 		<title>Web Toolz :: 다양한 웹서비스를 제공합니다.</title>
@@ -20,42 +21,28 @@
 		<meta property="twitter:title" content="Web Toolz :: 다양한 웹서비스를 제공합니다.">
 		<meta property="twitter:description" content="To Do 리스트, 사칙연산계산기, 대출이자계산기, 글자 수 세기, Color Picker, 마크다운 에디터, D-day 계산기, 스토워치 서비스를 제공합니다.">
 		<meta property="twitter:image" content="https://s3.ap-northeast-2.amazonaws.com/webtoolz.link/assets/images/web+toolz.jpg">
+		<meta name="keywords" content="web tool, web tools, simple calculator, to do list, color picker, markdown editor, dday, text counter, notepad" />
 
-		<meta name="keywords" content="Web Toolz :: 다양한 웹서비스를 제공합니다." />
+		<link rel="icon" href="assets/images/favicon.ico">
 
 		<!-- Mobile Metas -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-		<link rel="icon" href="assets/images/favicon.ico">
 		<!-- Web Fonts  -->
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Shadows+Into+Light" rel="stylesheet" type="text/css">
-
 		<!-- Vendor CSS -->
 		<link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.css" />
-
 		<link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.css" />
 		<link rel="stylesheet" href="assets/vendor/magnific-popup/magnific-popup.css" />
-		
-
+		<link rel="stylesheet" href="assets/vendor/bootstrap-datepicker/css/bootstrap-datepicker3.css" />
 		<!-- Specific Page Vendor CSS -->
 		<link rel="stylesheet" href="assets/vendor/jquery-ui/jquery-ui.css" />
 		<link rel="stylesheet" href="assets/vendor/jquery-ui/jquery-ui.theme.css" />
-		<link rel="stylesheet" href="assets/vendor/select2/css/select2.css" />
-		<link rel="stylesheet" href="assets/vendor/select2-bootstrap-theme/select2-bootstrap.min.css" />
-		<link rel="stylesheet" href="assets/vendor/bootstrap-multiselect/bootstrap-multiselect.css" />
-		<link rel="stylesheet" href="assets/vendor/bootstrap-tagsinput/bootstrap-tagsinput.css" />
-		<link rel="stylesheet" href="assets/vendor/codemirror/lib/codemirror.css" />
-		<link rel="stylesheet" href="assets/vendor/codemirror/theme/monokai.css" />
-
 		<!-- Theme CSS -->
 		<link rel="stylesheet" href="assets/stylesheets/theme.css" />
-
 		<!-- Skin CSS -->
 		<link rel="stylesheet" href="assets/stylesheets/skins/default.css" />
-
 		<!-- Theme Custom CSS -->
 		<link rel="stylesheet" href="assets/stylesheets/theme-custom.css">
-		<link rel="stylesheet" href="assets/vendor/bootstrap-datepicker/css/bootstrap-datepicker.min.css" />
-
 		<!-- Head Libs -->
 		<script src="assets/vendor/modernizr/modernizr.js"></script>
 		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6567981859216815" crossorigin="anonymous"></script>
@@ -198,7 +185,7 @@
 											<span data-detect="markdownEditor">Markdown Editor</span>
 										</a>
 									</li>
-									<li class="nav-active">
+									<li>
 										<a href="d-day.html">
 											<i class="fa fa-calendar" aria-hidden="true"></i>
 											<span data-detect="dDayCalc">D-day 계산기</span>
@@ -234,7 +221,7 @@
 											<span data-detect="diary">다이어리</span>
 										</a>
 									</li>
-									<li>
+                                    <li class="nav-active">
 										<a href="json-formatter.html">
 											<i class="fa fa-code" aria-hidden="true"></i>
 											<span data-detect="jsonFomatter">JSON 포맷터</span>
@@ -263,168 +250,60 @@
 
 				<section role="main" class="content-body">
 					<header class="page-header">
-						<h2 data-detect="dDayCalc">D-day 계산기</h2>
+						<h2 data-detect="jsonFomatter">JSON 포맷터</h2>
 					</header>
-
-					<div class="form-group">
-						<div class="col-md-6 col-lg-6 col-xl-3">
-							<section class="panel panel-featured-right panel-featured-primary">
-								<div class="panel-body">
-									<div class="widget-summary">
-										<div class="widget-summary-col widget-summary-col-icon">
-											<div class="summary-icon bg-primary">
-												D-
-											</div>
-										</div>
-										<div class="widget-summary-col">
-											<div class="summary" style="margin-top:18px;">
-												<h4 class="title" data-detect="dday_leftDate_text">남은 날짜</h4>
-												<div class="info">
-													<strong class="amount"><span id="leftDate">0</span><span data-detect="dday_day_text">일</span></strong>
-													<span class="text-primary">(<span id="leftHours">0</span><span data-detect="dday_time_text">시간</span>)</span>
-												</div>
-											</div>
-											
-										</div>
-									</div>
-								</div>
-							</section>
+                    <div class="col-md-10">
+						<textarea class="form-control" id="textArea" rows="20" placeholder="Paste or Input JSON.." style="width:100%;" >{"no":1,"name":"Steve","surname":"Jobs","company":"Apple"}</textarea>
+						<div style="margin: 10px 0;">
+							<span class="input-group-addon btn-success form-control" type="button" id="formattingBtn" data-detect="formatting"
+                        		style="text-align: center;">포맷 맞추기</span>
+							<span class="input-group-addon btn-default form-control" type="button" id="clearBtn" data-detect="clear"
+                        		style="text-align: center;">Clear</span>
 						</div>
-					</div>
-					<div class="form-group">
-						<div class="col-md-6 col-lg-6 col-xl-3">
-							<label class="control-label" data-detect="dday_includeStartDate_text">시작일 포함</label>
-							<div class="">
-								<div class="radio-custom radio-primary">
-									<input name="isTodayAddRadio" type="radio" value="y" required="" aria-required="true" checked>
-									<label for="awesome"  data-detect="dday_include_text">포함</label>
-								</div>
-								<div class="radio-custom radio-primary">
-									<input name="isTodayAddRadio" type="radio" value="n">
-									<label for="very-awesome" data-detect="dday_exclude_text">미포함</label>
-								</div>
-							</div>
-						</div>
-					</div>			
-					<div class="form-group">
-						<div class="col-md-6 col-lg-6 col-xl-3">
-							<label class="control-label" data-detect="dday_startDate_text">시작일</label>
-							<div class="">
-								<div class="input-group">
-									<span class="input-group-addon">
-										<i class="fa fa-calendar"></i>
-									</span>
-									<input type="text" id="startDate" class="date form-control" data-date-format="yyyy-mm-dd">
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="form-group">
-						<div class="col-md-6 col-lg-6 col-xl-3">
-							<label class="control-label" data-detect="dday_endDate_text">종료일</label>
-							<div class="">
-								<div class="input-group">
-									<span class="input-group-addon">
-										<i class="fa fa-calendar"></i>
-									</span>
-									<input type="text" id="endDate" class="date form-control" data-date-format="yyyy-mm-dd">
-								</div>
-							</div>
-						</div>
-					</div>
-							
+                        <textarea class="form-control" id="formatJson" rows="20" style="width:100%;" placeholder="JSON Format Result"></textarea>
+                    </div>
 				</section>
 			</div>
 		</section>
-
 		<!-- Vendor -->
 		<script src="assets/vendor/jquery/jquery.js"></script>
 		<script src="assets/vendor/jquery-browser-mobile/jquery.browser.mobile.js"></script>
 		<script src="assets/vendor/bootstrap/js/bootstrap.js"></script>
 		<script src="assets/vendor/nanoscroller/nanoscroller.js"></script>
+		
 		<!-- Specific Page Vendor -->
 		<script src="assets/vendor/jquery-ui/jquery-ui.js"></script>
 		<script src="assets/vendor/jqueryui-touch-punch/jqueryui-touch-punch.js"></script>
-		<script src="assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+		<script src="assets/vendor/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script>
+
+		
 		<!-- Theme Base, Components and Settings -->
 		<script src="assets/javascripts/theme.js"></script>
+		
 		<!-- Theme Custom -->
 		<script src="assets/javascripts/theme.custom.js"></script>
+		
 		<!-- Theme Initialization Files -->
 		<script src="assets/javascripts/theme.init.js"></script>
-
-		<script>
-
-			$(document).ready(function() {
-				
-				var today = new Date();
-				var addDate = new Date();
-				addDate.setDate(today.getDate() + 180);
-				// $('#startDate').datepicker('update', today);
-				// $('#endDate').datepicker('update', addDate);
-				$("#startDate").datepicker();
-				$("#endDate").datepicker();
-				$('#startDate').datepicker({
-					format : 'yyyy-mm-dd', 
-					autoclose: true, 
-					setDate: today, 
-					todayHighlight: true
-				}).datepicker('update', today);
-				$('#endDate').datepicker({
-					format : 'yyyy-mm-dd', 
-					autoclose: true, 
-					setDate: addDate, 
-					todayHighlight: true
-				}).datepicker('update', addDate);
-
-				setDDay();
-			});
-
-			const getDateDiff = (d1, d2) => {
-				const date1 = new Date(d1);
-				const date2 = new Date(d2);
-				
-				const diffDate = date1.getTime() - date2.getTime();
-				
-				return Math.abs(diffDate / (1000 * 60 * 60 * 24)); // 밀리세컨 * 초 * 분 * 시 = 일
-			}
-
-			function setComma(num) {
-				var pattern = /(^[+-]?\d+)(\d{3})/;
-				num += '';
-				while (pattern.test(num)) {
-					num = num.replace(pattern, '$1' + ',' + '$2');
-				}
-				return num;
-			}
-
-			function setDDay() {
-				var startDate = $('#startDate').val();
-				var endDate = $('#endDate').val()
-				var diffDate = getDateDiff(startDate, endDate);
-				
-				if($("input[name=isTodayAddRadio]:checked").val() == 'y') {
-					diffDate = diffDate + 1;
-					$("#leftDate").text(setComma(diffDate));
-					$("#leftHours").text(setComma(diffDate*24));
-				} else {
-					$("#leftDate").text(setComma(diffDate));
-					$("#leftHours").text(setComma(diffDate*24));
-				}
-			}
-
-			$("input[name=isTodayAddRadio]").on('change', function() {
-				setDDay();
-			})
-
-			$("#startDate").on('change', function() {
-				setDDay();
-			})
-
-			$("#endDate").on('change', function() {
-				setDDay();
-			})
-
-		</script>
 	</body>
-</html>
+	<script>
+		beautifyJson();
+
+		$('#formattingBtn').click(function () {
+			beautifyJson();
+		});
+
+		function beautifyJson() {
+			var obj = JSON.parse($("#textArea").val());
+			var formatJson = JSON.stringify(obj, null, 4);
+			$("#formatJson").val(formatJson);
+		}
+
+
+		$('#clearBtn').click(function () {
+			$("#textArea").val("");
+			$("#formatJson").val("");
+		});
+		
+	</script>
+</html>	

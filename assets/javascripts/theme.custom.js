@@ -258,6 +258,7 @@ let multiLanguage = {
         shoppingList:"쇼핑 리스트",
         regex:"정규식 테스트",
         diary:"일기",
+        jsonFomatter:"JSON 포맷터",
         // menu explain
         toDoList_explain:"깔끔한 디자인의 To Do 리스트 입니다.",
         simpleCalc_explain:"깔끔한 디자인의 사칙연산 계산기 입니다.",
@@ -272,6 +273,7 @@ let multiLanguage = {
         shoppingList_explain:"쇼핑 리스트를 관리해 보세요.",
         regex_explain:"정규식을 테스트해보세요.",
         diary_explain:"깔끔한 디자인의 심플 다이어리 입니다.",
+        jsonFomatter_explain:"JSON을 포맷에 맞게 수정해 줍니다.",
         // to do list
         toDoList_plusAdd_text:"+ 추가",
         toDoList_complete_text:"완료",
@@ -339,6 +341,9 @@ let multiLanguage = {
         diary_inputDate_text:"오늘 날짜를 입력해 주세요.",
         diary_inputFeeling_text:"오늘 기분은 어땠나요?",
         diary_inputDiary_text:"오늘 있었던 일을 기록하세요.",
+        // json formatter
+        formatting:"포맷 맞추기",
+        clear:"클리어",
     },
     "en" : {
         msg : "Hello World.",
@@ -358,6 +363,7 @@ let multiLanguage = {
         shoppingList:"Shopping List",
         regex:"RegEx Test",
         diary:"Diary",
+        jsonFomatter:"JSON Formatter",
         // menu explain
         toDoList_explain:"It's a simple design to do list.",
         simpleCalc_explain:"It's a simple design arithmetic calculator.",
@@ -372,6 +378,7 @@ let multiLanguage = {
         shoppingList_explain:"Manage your shopping list.",
         regex_explain:"Test your regular expression.",
         diary_explain:"It's a simple diary.",
+        jsonFomatter_explain:"Make JSON prettier/beautifier simply.",
         // to do list
         toDoList_plusAdd_text:"+ Add",
         toDoList_complete_text:"Check",
@@ -439,6 +446,9 @@ let multiLanguage = {
         diary_inputDate_text:"Please enter today's date.",
         diary_inputFeeling_text:"How did you feel today?",
         diary_inputDiary_text:"Record what happened today.",
+        // json formatter
+        formatting:"Format / Beautify",
+        clear:"Clear",
         
     }
 };
