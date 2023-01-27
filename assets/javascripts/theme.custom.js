@@ -344,6 +344,8 @@ let multiLanguage = {
         // json formatter
         formatting:"포맷 맞추기",
         clear:"클리어",
+        // markdown editor
+        markdown_reset_text:"작성한 데이터는 저장되지 않습니다.",
     },
     "en" : {
         msg : "Hello World.",
@@ -449,7 +451,8 @@ let multiLanguage = {
         // json formatter
         formatting:"Format / Beautify",
         clear:"Clear",
-        
+        // markdown editor
+        markdown_reset_text:"The data you write will not be saved.",
     },
     "jp" : {
         msg :"こんにちは世界。",
@@ -541,6 +544,8 @@ let multiLanguage = {
         diary_inputDiary_text:"今日の出来事を記録します。",
         formatting:"整形・美化",
         clear:"クリア",
+        // markdown editor
+        markdown_reset_text:"書き込んだデータは保存されません。",
     }, 
     "cn" : {
         msg : "你好世界。",
@@ -632,6 +637,8 @@ let multiLanguage = {
         diary_inputDiary_text: "记录今天发生的事情。",
         formatting: "格式/美化",
         clear: "清除",
+        // markdown editor
+        markdown_reset_text:"您写入的数据将不会被保存。",
     }
 };
 
