@@ -450,6 +450,188 @@ let multiLanguage = {
         formatting:"Format / Beautify",
         clear:"Clear",
         
+    },
+    "jp" : {
+        msg :"こんにちは世界。",
+        title:"英語",
+        goPage:"ページに移動",
+        toDoList:"やることリスト",
+        simpleCalc:"算術計算機",
+        loanInterestCalc:"ローン金利計算機",
+        countText:"テキストカウンター",
+        colorPicker:"カラーセレクター",
+        markdownEditor:"マークダウン エディター",
+        dDayCalc:"D-day 電卓",
+        stopWatch:"ストップウォッチ",
+        memo:"メモ帳",
+        lotto:"ロトジェネレーター",
+        shoppingList:"買い物リスト",
+        regex:"正規表現テスト",
+        diary:"日記",
+        jsonFomatter:"JSON フォーマッター",
+        toDoList_explain:"やることリストのシンプルなデザインです。",
+        simpleCalc_explain:"シンプルなデザインの算数計算機です。",
+        loanInterestCalc_explain:"これは、単純なローン金利計算機です。",
+        countText_explain:"テキストの数をカウントします。(スペースを含む/スペースを除く)",
+        colorPicker_explain:"色を選択してカラーコード(RGBA)に変換",
+        markdownEditor_explain:"Mark Down Editor で文章を編集します。",
+        dDayCalc_explain:"D デイの日付を計算します。",
+        stopWatch_explain:"シンプルなデザインのストップウォッチです。",
+        memo_explain:"メモを取って、内容をコピーして貼り付けるだけです。",
+        lotto_explain:"1 から 45 の番号から 6 つの宝くじ番号を生成します。",
+        shoppingList_explain:"買い物リストを管理します。",
+        regex_explain:"正規表現をテストします。",
+        diary_explain:"簡単な日記です。",
+        jsonFomatter_explain:"JSON をよりきれいに/美しくする。",
+        toDoList_plusAdd_text:"+ 追加",
+        toDoList_complete_text:"小切手",
+        toDoList_todo_text:"トド",
+        toDoList_delete_text:"消去",
+        calc_firstNumber_text:"最初の番号",
+        calc_secondNumber_text:"秒数",
+        calc_plus_text:"+ プラス",
+        calc_minus_text:"- マイナス",
+        calc_multiply_text:"×掛ける",
+        calc_divide_text:"÷ 割る",
+        calc_result_text:"結果",
+        loanCalc_amount_text:"ローン金額",
+        loanCalc_won_text:"¥",
+        loanCalc_year_text:"1年当たり",
+        data_interestRate_text:"ローン金利",
+        loanCalc_1000000_text:"+ 100万",
+        loanCalc_100000000_text:"+ 1,000万",
+        loanCalc_1000000000_text:"+ 1億",
+        loanCalc_loanPeriod_text:"貸出期間",
+        loanCalc_loanMonth_text:"月",
+        loanCalc_oneYear_text:"1年",
+        loanCalc_threeYear_text:"3年",
+        loanCalc_fiveYear_text:"5年",
+        loanCalc_calculate_text:"計算する",
+        textCounter_withSpace_text:"スペースを含める:",
+        textCounter_withoutSpace_text:"スペースを除外:",
+        textCounter_characters_text:" 文字",
+        dday_leftDate_text:"残日",
+        dday_day_text:" 日々",
+        dday_time_text:" 時間",
+        dday_includeStartDate_text:"開始日を含める",
+        dday_include_text:"含む",
+        dday_exclude_text:"除外",
+        dday_startDate_text:"開始日（今日）",
+        dday_endDate_text:"終了日",
+        stopWatch_start_text:"始める",
+        stopWatch_stop_text:"ストップ",
+        stopWatch_reset_text:"リセット",
+        memo_copy_text:"コピー",
+        lotto_getNumber_text:"リトライ",
+        shoppingList_complete_text:"完了",
+        shoppingList_item_text:"買い物リスト",
+        regex_regex_text:"正規表現",
+        regex_apply_text:"申し込み",
+        regex_subject_text:"ターゲット テキスト",
+        regex_result_text:"結果",
+        regex_seperator_text:"セパレーター",
+        regex_testResult_text:"テスト結果 ：",
+        regex_rule_text:"正規表現の規則",
+        regex_patternStart_text:"開始パターン区切り",
+        regex_patternExpression_text:"見つけるパターン",
+        regex_patternEnd_text:"パターン区切りの終わり",
+        regex_patternChange_text:"パターンチェンジャー",
+        diary_inputDate_text:"今日の日付を入力してください。",
+        diary_inputFeeling_text:"今日はどんな気分でしたか？",
+        diary_inputDiary_text:"今日の出来事を記録します。",
+        formatting:"整形・美化",
+        clear:"クリア",
+    }, 
+    "cn" : {
+        msg : "你好世界。",
+        title: "英语",
+        goPage: "转到页面",
+        toDoList: "待办事项",
+        simpleCalc: "算术计算器",
+        loanInterestCalc: "贷款利息计算器",
+        countText: "文本计数器",
+        colorPicker: "颜色选择器",
+        markdownEditor: "降价编辑器",
+        dDayCalc: "D 日计算器",
+        stopWatch: "秒表",
+        memo: "记事本",
+        lotto: "乐透生成器",
+        shoppingList: "购物清单",
+        regex: "正则表达式测试",
+        diary: "日记",
+        jsonFomatter: "JSON格式化程序",
+        toDoList_explain: "这是一个简单的待办事项设计。",
+        simpleCalc_explain: "这是一个简单的设计算术计算器。",
+        loanInterestCalc_explain: "这是一个简单的贷款利息计算器。",
+        countText_explain: "计算文本的数量。（包括空格/不包括空格）",
+        colorPicker_explain: "选择一种颜色并将其转换为颜色代码（RGBA）",
+        markdownEditor_explain: "使用 Mark Down 编辑器编辑句子。",
+        dDayCalc_explain: "计算 D 日日期。",
+        stopWatch_explain: "这是一款设计简单的秒表。",
+        memo_explain: "只需记下并复制和粘贴内容即可。",
+        lotto_explain: "从 1 到 45 的数字生成 6 个彩票号码。",
+        shoppingList_explain: "管理您的购物清单。",
+        regex_explain: "测试你的正则表达式。",
+        diary_explain: "这是一本简单的日记。",
+        jsonFomatter_explain: "让 JSON 更漂亮/更简单。",
+        toDoList_plusAdd_text: "+ 添加",
+        toDoList_complete_text: "查看",
+        toDoList_todo_text: "去做",
+        toDoList_delete_text: "删除",
+        calc_firstNumber_text: "第一个号码",
+        calc_secondNumber_text: "第二个号码",
+        calc_plus_text: "+ 加上",
+        calc_minus_text: "- 减",
+        calc_multiply_text: "× 相乘",
+        calc_divide_text: "÷ 除法",
+        calc_result_text: "结果",
+        loanCalc_amount_text: "贷款额度",
+        loanCalc_won_text: "元",
+        loanCalc_year_text: "每年",
+        data_interestRate_text: "贷款利率",
+        loanCalc_1000000_text: "+ 100 万",
+        loanCalc_100000000_text: "+ 1000万",
+        loanCalc_1000000000_text: "+ 100 百万",
+        loanCalc_loanPeriod_text: "贷款期限",
+        loanCalc_loanMonth_text: "月",
+        loanCalc_oneYear_text: "1年",
+        loanCalc_threeYear_text: "3年",
+        loanCalc_fiveYear_text: "5年",
+        loanCalc_calculate_text: "计算",
+        textCounter_withSpace_text: "包括空格：",
+        textCounter_withoutSpace_text: "排除空格：",
+        textCounter_characters_text: " 人物",
+        dday_leftDate_text: "离开日期",
+        dday_day_text: " 天",
+        dday_time_text: " 小时",
+        dday_includeStartDate_text: "包括开始日期",
+        dday_include_text: "包括",
+        dday_exclude_text: "排除",
+        dday_startDate_text: "开始日期（今天）",
+        dday_endDate_text: "结束日期",
+        stopWatch_start_text: "开始",
+        stopWatch_stop_text: "停止",
+        stopWatch_reset_text: "重置",
+        memo_copy_text: "复制",
+        lotto_getNumber_text: "重试",
+        shoppingList_complete_text: "完全的",
+        shoppingList_item_text: "要买的东西",
+        regex_regex_text: "正则表达式",
+        regex_apply_text: "申请",
+        regex_subject_text: "目标文本",
+        regex_result_text: "结果",
+        regex_seperator_text: "分隔符",
+        regex_testResult_text: "测试结果 ：",
+        regex_rule_text: "正则表达式规则",
+        regex_patternStart_text: "起始模式分隔符",
+        regex_patternExpression_text: "要查找的模式",
+        regex_patternEnd_text: "模式分隔符结束",
+        regex_patternChange_text: "模式转换器",
+        diary_inputDate_text: "请输入今天的日期。",
+        diary_inputFeeling_text: "你今天感觉如何？",
+        diary_inputDiary_text: "记录今天发生的事情。",
+        formatting: "格式/美化",
+        clear: "清除",
     }
 };
 
@@ -457,12 +639,18 @@ window.onload = () => {
     
     let koBtn = document.getElementById("koBtn");
     let enBtn = document.getElementById("enBtn");
+    let jpBtn = document.getElementById("jpBtn");
+    let cnBtn = document.getElementById("cnBtn");
 
     let setLanguage = (lang) => {
         if(lang == 'ko') {
             $("#setLanguage").text("KR");
         } else if(lang == 'en') {
             $("#setLanguage").text("EN");
+        } else if(lang == 'jp') {
+            $("#setLanguage").text("JP");
+        } else if(lang == 'cn') {
+            $("#setLanguage").text("CN");
         }
         let changeNodeList = Array.prototype.slice.call(document.querySelectorAll('[data-detect]'));
         
@@ -482,19 +670,37 @@ window.onload = () => {
         localStorage.setItem("language", "en");
     });
 
+    jpBtn.addEventListener("click" , () => {
+        setLanguage(jpBtn.dataset.lang);
+        localStorage.setItem("language", "jp");
+    });
+
+    cnBtn.addEventListener("click" , () => {
+        setLanguage(cnBtn.dataset.lang);
+        localStorage.setItem("language", "cn");
+    });
+
     // 한국어/영어 세팅(초기화)
     var userLang = navigator.language || navigator.userLanguage; // 내비게이터 언어
     var userSetLang = localStorage.getItem("language"); // 사용자 세팅 언어
     if(userSetLang != null) {
         if (userSetLang == 'ko') {
             setLanguage('ko');
-        } else {
+        } else if (userSetLang == 'en') {
             setLanguage('en');
+        } else if (userSetLang == 'jp') {
+            setLanguage('jp');
+        } else if (userSetLang == 'cn') {
+            setLanguage('cn');
         }
     } else if(userLang.split('-')[0] == 'ko') {
         setLanguage('ko');
-    } else {
+    } else if(userLang.split('-')[0] == 'en') {
         setLanguage('en');
+    } else if(userLang.split('-')[0] == 'jp') {
+        setLanguage('jp');
+    } else if(userLang.split('-')[0] == 'cn') {
+        setLanguage('cn');
     }
 
     // theme 시팅(초기화)
