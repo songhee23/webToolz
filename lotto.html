@@ -336,13 +336,13 @@
                     //새로 추가될 숫자 : 1~45사이의 숫자가 랜덤하게 처리
                     //random() : 0~1사이의 랜덤한 소수
                     //floor() : 내림처리해서 정수로 변경
-                    var num = Math.floor(Math.random() * 44) + 1;
+                    var num = Math.floor(Math.random() * 45) + 1;
 
                     //현재 상태는 같은 숫자가 나올수 있음
                     //lotto라는 배열에 담긴 숫자와 같이 같으면 안됨
                     for(var j in lotto){
                         while(num == lotto[j]){ //현재 새로나온 숫자가 기존 숫자와 같으면
-                            num = Math.floor(Math.random() * 44) + 1;
+                            num = Math.floor(Math.random() * 45) + 1;
                         }
                     }
                     //push() - 배열에 마지막에 값추가메서드
