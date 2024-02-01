@@ -236,7 +236,7 @@
 									<li>
 										<a href="counter.html">
 											<i class="fa fa-unsorted" aria-hidden="true"></i>
-											<span data-detect="counter">계수기</span>
+											<span>계수기</span>
 										</a>
 									</li>
 								</ul>	
@@ -262,43 +262,65 @@
 
 				<section role="main" class="content-body">
 					<header class="page-header">
-						<h2 data-detect="jsonFomatter">JSON 포맷터</h2>
+						<h2>문자 케이스 변경</h2>
 					</header>
-                    <div class="col-md-10">
-						<div style="text-align:center;"> 
-							<p class="control-label">케이스 종류</p>
-								<span >Camel case(카멜케이스) : </span>
-								<span id="withSpaceNum" style="color: black; font-weight: bold;">youAreAmazing</span><p></p>
-								<span >Pascal case(파스칼케이스) : </span>
-								<span id="withSpaceNum" style="color: black; font-weight: bold;">YouAreAmazing</span><p></p>
-
-								<span >Snake case(스네이크케이스) : </span>
-								<span id="withSpaceNum" style="color: orange; font-weight: bold;">you_are_amazing</span><p></p>
-								<span >Upper Snake case(어퍼 스네이크케이스) : </span>
-								<span id="withSpaceNum" style="color: orange; font-weight: bold;">YOU_ARE_AMAZING</span><p></p>
-								<span >Kebab case(케밥케이스) : </span>
-								<span id="withSpaceNum" style="color: red; font-weight: bold;">you-are-amazing</span><p></p>
-						</div>	
-						<hr>		
+                    <div class="col-md-8">
+	
 								
-						<textarea class="form-control" id="textArea" rows="20" placeholder="Paste or Input Upper Snake Case.." style="width:100%;" >Source..</textarea>
+						<textarea class="form-control" id="source" rows="20" placeholder="Source.." style="width:100%;" ></textarea>
+						<hr>
 						<div style="margin: 10px 0;">
-							<span class="btn-success form-control" type="button" id="formattingBtn" 
-                        		style="text-align: center;">Upper Snake to Camel (ex. YOU_ARE_AMAZING > youAreAmazing)</span></div>
-								<div style="margin: 10px 0;">
-								<span class="btn-success form-control" type="button" id="formattingBtn" 
-                        		style="text-align: center;">Camel to Upper Snake (ex. youAreAmazing > YOU_ARE_AMAZING)</span></div>
-								<div style="margin: 10px 0;"><span class="btn-success form-control" type="button" id="formattingBtn" 
-                        		style="text-align: center;">Camel to Snake (ex. youAreAmazing > you_are_amazing</span>
-								<div style="margin: 10px 0;"><span class="btn-success form-control" type="button" id="formattingBtn" 
-                        		style="text-align: center;">Camel to Kebab (ex. youAreAmazing > you-are-amazing)</span></div>
-						
+							<span class="btn-primary form-control" type="button" id="formattingBtn" onclick="changeCamel();"
+                        		style="text-align: center;">Upper Snake to Camel </span>
+							<div style="text-align:center;">ex. YOU_ARE_AMAZING > youAreAmazing</div>
+						</div><hr>
+						<div style="margin: 10px 0;">
+							<span class="btn-success form-control" type="button" id="formattingBtn" onclick="changeUpperSnake();"
+                        		style="text-align: center;">Camel to Upper Snake</span>
+							<div style="text-align:center;">ex. youAreAmazing > YOU_ARE_AMAZING</div>
+						</div> 
+						<div style="margin: 10px 0;">
+							<span class="btn-success form-control" type="button" id="formattingBtn" onclick="changeLowerSnake();"
+                        	style="text-align: center;">Camel to Snake </span>
+							<div style="text-align:center;">ex. youAreAmazing > you_are_amazing</div>
+						</div>
+						<div style="margin: 10px 0;">
+							<span class="btn-success form-control" type="button" id="formattingBtn" onclick="changeKebab();"
+                        		style="text-align: center;">Camel to Kebab </span>
+							<div style="text-align:center;">ex. youAreAmazing > you-are-amazing</div>
+						</div>
+						<hr>
+						<div style="margin: 10px 0;">
+							<span class="btn-warning form-control" type="button" id="formattingBtn" onclick="changeFirstUpper();"
+								style="text-align: center;">Camel to Pascal</span>
+							<div style="text-align:center;">ex. youAreAmazing > YouAreAmazing</div>
+						</div>
+						<div style="margin: 10px 0;">
+							<span class="btn-warning form-control" type="button" id="formattingBtn" onclick="changeFirstLower();"
+								style="text-align: center;">Pascal to Camel</span>
+							<div style="text-align:center;">ex. YouAreAmazing > youAreAmazing</div>
+						</div><hr>
 						<div style="margin: 10px 0;">
 							<span class="btn-default form-control" type="button" id="clearBtn" data-detect="clear"
                         		style="text-align: center;">Clear</span>
 							</div>
-                        <textarea class="form-control" id="formatJson" rows="20" style="width:100%;" placeholder="Result.."></textarea>
+							<hr>
+                        <textarea class="form-control" id="dest" rows="20" style="width:100%;" placeholder="Result.."></textarea>
                     </div>
+					<div class="col-md-4" style="text-align:center;"> 
+						<p class="control-label">케이스 종류</p>
+							<span >Camel case(카멜케이스) : </span>
+							<span id="withSpaceNum" style="font-weight: bold;">youAreAmazing</span><p></p>
+							<span >Pascal case(파스칼케이스) : </span>
+							<span id="withSpaceNum" style=" font-weight: bold;">YouAreAmazing</span><p></p>
+
+							<span >Snake case(스네이크케이스) : </span>
+							<span id="withSpaceNum" style="font-weight: bold;">you_are_amazing</span><p></p>
+							<span >Upper Snake case(어퍼 스네이크케이스) : </span>
+							<span id="withSpaceNum" style="font-weight: bold;">YOU_ARE_AMAZING</span><p></p>
+							<span >Kebab case(케밥케이스) : </span>
+							<span id="withSpaceNum" style="font-weight: bold;">you-are-amazing</span><p></p>
+					</div>		
 				</section>
 			</div>
 		</section>
@@ -324,23 +346,57 @@
 		<script src="assets/javascripts/theme.init.js"></script>
 	</body>
 	<script>
-		beautifyJson();
-
-		$('#formattingBtn').click(function () {
-			beautifyJson();
-		});
-
-		function beautifyJson() {
-			var obj = JSON.parse($("#textArea").val());
-			var formatJson = JSON.stringify(obj, null, 4);
-			$("#formatJson").val(formatJson);
-		}
-
 
 		$('#clearBtn').click(function () {
-			$("#textArea").val("");
-			$("#formatJson").val("");
+			$("#source").val("");
+			$("#dest").val("");
 		});
 		
+		function changeCamel() {
+			var camelVal = toCamel($("#source").val());
+			$("#dest").val(camelVal);
+		}
+		function changeUpperSnake() {
+			var camelVal = toUpperSnake($("#source").val());
+			$("#dest").val(camelVal);
+		}
+		function changeLowerSnake() {
+			var camelVal = toLowerSnake($("#source").val());
+			$("#dest").val(camelVal);
+		}
+		function changeKebab() {
+			var camelVal = toKebap($("#source").val());
+			$("#dest").val(camelVal);
+		}
+		function changeFirstLower() {
+			var camelVal = $("#source").val();
+			var valArr = camelVal.split('\n');
+			var result = "";
+			for(let i=0; i<valArr.length; i++) {
+				result += valArr[i].replace(/^./, valArr[i].charAt(0).toLowerCase()) +'\n';
+			}
+			$("#dest").val(result);
+		}
+		function changeFirstUpper() {
+			var camelVal = $("#source").val();
+			var valArr = camelVal.split('\n');
+			var result = "";
+			for(let i=0; i<valArr.length; i++) {
+				result += valArr[i].replace(/^./, valArr[i].charAt(0).toUpperCase()) +'\n';
+			}
+			$("#dest").val(result);
+		}
+		function toCamel(str) {
+			return str.toLowerCase().replace(/(_\w)/g, m=> m.toUpperCase().substr(1));
+		}
+		function toUpperSnake(str) {
+			return str.replace(/[A-Z]/g, (c) => {return '_' + c.toLowerCase()}).toUpperCase();
+		}
+		function toLowerSnake(str) {
+			return str.replace(/[A-Z]/g, (c) => {return '_' + c.toLowerCase()}).toLowerCase();
+		}
+		function toKebap(str) {
+			return str.replace(/[A-Z]/g, (c) => {return '-' + c.toLowerCase()}).toLowerCase();
+		}
 	</script>
 </html>	
