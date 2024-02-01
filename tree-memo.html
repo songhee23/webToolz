@@ -225,7 +225,7 @@
 											<span data-detect="stopWatch">스톱 워치</span>
 										</a>
 									</li>
-                                    <li class="nav-active">
+                                    <li >
 										<a href="memo.html">
 											<i class="fa fa-text-width" aria-hidden="true"></i>
 											<span data-detect="memo">메모장</span>
@@ -267,6 +267,12 @@
 											<span >문자 케이스 변경</span>
 										</a>
 									</li>
+									<li class="nav-active">
+										<a href="tree-memo.html">
+											<i class="fa fa-folder" aria-hidden="true"></i>
+											<span >트리메모</span>
+										</a>
+									</li>
 								</ul>	
 							</nav>
 						</div>
@@ -290,14 +296,20 @@
 
 				<section role="main" class="content-body">
 					<header class="page-header">
-						<h2>트리 마인드맵</h2>
+						<h2>트리메모</h2>
 					</header>
                     <div class="col-md-10">
-                        <input id="save" type="button" value="저장" onclick="save();">
+
                         <div>
-                            <span>검색어 : </span><input id="searchText" type="text">
+							<div class="form-group">
+								<label class="control-label" >검색어</label>
+								<input id="searchText" class="form-control">
+							</div>
                         </div>
+						<hr>
                         <div id="tree"></div>
+						<hr>
+						<button type="button" id="save" class="btn btn-primary" onclick="save();">저장</button>
                     </div>
 				</section>
 			</div>
