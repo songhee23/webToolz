@@ -1,0 +1,433 @@
+<!doctype html>
+<html class="fixed">
+
+<head>
+	<!-- Basic -->
+	<meta charset="UTF-8">
+	<!-- Primary Meta Tags -->
+	<title>Web Toolz :: 다양한 웹서비스를 제공합니다.</title>
+	<meta name="title" content="Web Toolz :: 다양한 웹서비스를 제공합니다.">
+	<meta name="description"
+		content="To Do 리스트, 사칙연산계산기, 대출이자계산기, 글자 수 세기, Color Picker, 마크다운 에디터, D-day 계산기, 스톱워치 서비스 등을 제공합니다.">
+
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="http://webtoolz.link/">
+	<meta property="og:title" content="Web Toolz :: 다양한 웹서비스를 제공합니다.">
+	<meta property="og:description"
+		content="To Do 리스트, 사칙연산계산기, 대출이자계산기, 글자 수 세기, Color Picker, 마크다운 에디터, D-day 계산기, 스톱워치 서비스 등을 제공합니다.">
+	<meta property="og:image"
+		content="https://s3.ap-northeast-2.amazonaws.com/webtoolz.link/assets/images/web+toolz.jpg">
+
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:url" content="http://webtoolz.link/">
+	<meta property="twitter:title" content="Web Toolz :: 다양한 웹서비스를 제공합니다.">
+	<meta property="twitter:description"
+		content="To Do 리스트, 사칙연산계산기, 대출이자계산기, 글자 수 세기, Color Picker, 마크다운 에디터, D-day 계산기, 스톱워치 서비스 등을 제공합니다.">
+	<meta property="twitter:image"
+		content="https://s3.ap-northeast-2.amazonaws.com/webtoolz.link/assets/images/web+toolz.jpg">
+	<meta name="keywords"
+		content="web tool, web tools, simple calculator, to do list, color picker, markdown editor, dday, text counter, notepad" />
+
+	<link rel="icon" href="assets/images/favicon.ico">
+
+	<!-- Mobile Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<!-- Web Fonts  -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Shadows+Into+Light"
+		rel="stylesheet" type="text/css">
+	<!-- Vendor CSS -->
+	<link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.css" />
+	<link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.css" />
+	<link rel="stylesheet" href="assets/vendor/magnific-popup/magnific-popup.css" />
+	<link rel="stylesheet" href="assets/vendor/bootstrap-datepicker/css/bootstrap-datepicker3.css" />
+	<!-- Specific Page Vendor CSS -->
+	<link rel="stylesheet" href="assets/vendor/jquery-ui/jquery-ui.css" />
+	<link rel="stylesheet" href="assets/vendor/jquery-ui/jquery-ui.theme.css" />
+	<!-- Theme CSS -->
+	<link rel="stylesheet" href="assets/stylesheets/theme.css" />
+	<!-- Skin CSS -->
+	<link rel="stylesheet" href="assets/stylesheets/skins/default.css" />
+	<!-- Theme Custom CSS -->
+	<link rel="stylesheet" href="assets/stylesheets/theme-custom.css">
+	<!-- Head Libs -->
+	<script src="assets/vendor/modernizr/modernizr.js"></script>
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6567981859216815"
+		crossorigin="anonymous"></script>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-4KJQ9ED5RL"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-4KJQ9ED5RL');
+	</script>
+</head>
+
+<body>
+	<section class="body">
+
+		<!-- start: header -->
+		<header class="header">
+			<div class="logo-container">
+				<h1 class="logo">
+					Web Toolz
+				</h1>
+				<div class="visible-xs toggle-sidebar-left" data-toggle-class="sidebar-left-opened" data-target="html"
+					data-fire-event="sidebar-left-opened">
+					<i class="fa fa-bars" aria-label="Toggle sidebar"></i>
+				</div>
+			</div>
+
+			<!-- start: header buttons -->
+			<div class="header-right">
+				<ul class="notifications" style="margin:8px 0px;">
+					<li>
+						<div style="margin-top:5px; display:flex;flex-direction: row-reverse;">
+							<input type="checkbox" id="chageTheme" style="margin: 4px 20px 4px 10px">
+							<span>Dark Mode</span>
+						</div>
+					</li>
+					<li>
+						<a id="favorite" href="javascript:;" class="notification-icon">
+							<i class="fa fa-star"></i>
+						</a>
+					</li>
+					<li>
+						<a id="share" href="javascript:;" class="notification-icon">
+							<i class="fa fa-share-alt"></i>
+						</a>
+					</li>
+					<li>
+						<a id="share" href="mailto:goodfriend.3777@gmail.com?subject=Web Toolz에게 바라는 점"
+							class="notification-icon">
+							<i class="fa fa fa-exclamation"></i>
+						</a>
+					</li>
+				</ul>
+				<span class="separator"></span>
+				<div id="userbox" class="userbox">
+					<a href="#" data-toggle="dropdown" aria-expanded="false">
+						<div class="profile-info">
+							<span class="name" id="setLanguage">KR</span>
+						</div>
+						<i class="fa custom-caret"></i>
+					</a>
+					<div class="dropdown-menu">
+						<ul class="list-unstyled">
+							<li class="divider"></li>
+							<li>
+								<a role="menuitem" id="koBtn" data-lang="ko" tabindex="-1"
+									href="javascript:void();">KR</a>
+							</li>
+							<li>
+								<a role="menuitem" id="enBtn" data-lang="en" tabindex="-1"
+									href="javascript:void();">EN</a>
+							</li>
+							<li>
+								<a role="menuitem" id="jpBtn" data-lang="jp" tabindex="-1"
+									href="javascript:void();">JP</a>
+							</li>
+							<li>
+								<a role="menuitem" id="cnBtn" data-lang="cn" tabindex="-1"
+									href="javascript:void();">CN</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- end: header buttons -->
+		</header>
+		<!-- end: header -->
+
+		<div class="inner-wrapper">
+			<!-- start: sidebar -->
+			<aside id="sidebar-left" class="sidebar-left">
+
+				<div class="sidebar-header">
+					<div class="sidebar-title">
+						<!-- search input -->
+						<input type="text" id="menuSearch" class="form-control search-input" placeholder="search menu">
+					</div>
+					<div class="sidebar-toggle hidden-xs" data-toggle-class="sidebar-left-collapsed" data-target="html"
+						data-fire-event="sidebar-left-toggle">
+						<i class="fa fa-bars" aria-label="Toggle sidebar"></i>
+					</div>
+				</div>
+
+				<div class="nano">
+					<div class="nano-content">
+						<nav id="menu" class="nav-main" role="navigation">
+							<ul class="nav nav-main">
+								<li>
+									<a href="index.html">
+										<i class="fa fa-home" aria-hidden="true"></i>
+										<span>home</span>
+									</a>
+								</li>
+								<li>
+									<a href="to-do-list.html">
+										<i class="fa fa-check-square-o" aria-hidden="true"></i>
+										<span data-detect="toDoList">To Do 리스트</span>
+									</a>
+								</li>
+								<li>
+									<a href="shopping-list.html">
+										<i class="fa fa-check-square-o" aria-hidden="true"></i>
+										<span data-detect="shoppingList">쇼핑 리스트</span>
+									</a>
+								</li>
+								<li>
+									<a href="calc.html">
+										<i class="fa fa-calculator" aria-hidden="true"></i>
+										<span data-detect="simpleCalc">사칙연산 계산기</span>
+									</a>
+								</li>
+								<li>
+									<a href="calc2.html">
+										<i class="fa fa-calculator" aria-hidden="true"></i>
+										<span data-detect="loanInterestCalc">대출이자 계산기</span>
+									</a>
+								</li>
+								<li>
+									<a href="text-count.html">
+										<i class="fa fa-align-left" aria-hidden="true"></i>
+										<span data-detect="countText">글자 수 세기</span>
+									</a>
+								</li>
+								<li>
+									<a href="color-picker.html">
+										<i class="fa fa-eyedropper" aria-hidden="true"></i>
+										<span data-detect="colorPicker">Color Picker</span>
+									</a>
+								</li>
+								<li>
+									<a href="markdown-editor.html">
+										<i class="fa fa-edit" aria-hidden="true"></i>
+										<span data-detect="markdownEditor">Markdown Editor</span>
+									</a>
+								</li>
+								<li>
+									<a href="d-day.html">
+										<i class="fa fa-calendar" aria-hidden="true"></i>
+										<span data-detect="dDayCalc">D-day 계산기</span>
+									</a>
+								</li>
+								<li>
+									<a href="stop-watch.html">
+										<i class="fa fa-clock-o" aria-hidden="true"></i>
+										<span data-detect="stopWatch">스톱 워치</span>
+									</a>
+								</li>
+								<li>
+									<a href="memo.html">
+										<i class="fa fa-text-width" aria-hidden="true"></i>
+										<span data-detect="memo">메모장</span>
+									</a>
+								</li>
+								<li>
+									<a href="lotto.html">
+										<i class="fa fa-spinner" aria-hidden="true"></i>
+										<span data-detect="lotto">로또 번호 생성기</span>
+									</a>
+								</li>
+								<li>
+									<a href="regex.html">
+										<i class="fa fa-asterisk" aria-hidden="true"></i>
+										<span data-detect="regex">정규식 테스트</span>
+									</a>
+								</li>
+								<li>
+									<a href="diary.html">
+										<i class="fa fa-book" aria-hidden="true"></i>
+										<span data-detect="diary">다이어리</span>
+									</a>
+								</li>
+								<li>
+									<a href="json-formatter.html">
+										<i class="fa fa-code" aria-hidden="true"></i>
+										<span data-detect="jsonFomatter">JSON 포맷터</span>
+									</a>
+								</li>
+								<li>
+									<a href="counter.html">
+										<i class="fa fa-unsorted" aria-hidden="true"></i>
+										<span>계수기</span>
+									</a>
+								</li>
+								<li class="nav-active">
+									<a href="change-case.html">
+										<i class="fa fa-code" aria-hidden="true"></i>
+										<span>문자 케이스 변경</span>
+									</a>
+								</li>
+								<li>
+									<a href="tree-memo.html">
+										<i class="fa fa-folder" aria-hidden="true"></i>
+										<span>트리메모</span>
+									</a>
+								</li>
+								<li>
+									<a href="change-simple-regex.html">
+										<i class="fa fa-folder" aria-hidden="true"></i>
+										<span>간단한 정규식</span>
+									</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+
+					<script>
+						// Maintain Scroll Position
+						if (typeof localStorage !== 'undefined') {
+							if (localStorage.getItem('sidebar-left-position') !== null) {
+								var initialPosition = localStorage.getItem('sidebar-left-position'),
+									sidebarLeft = document.querySelector('#sidebar-left .nano-content');
+
+								sidebarLeft.scrollTop = initialPosition;
+							}
+						}
+					</script>
+
+				</div>
+
+			</aside>
+			<!-- end: sidebar -->
+
+			<section role="main" class="content-body">
+				<header class="page-header">
+					<h2>간단한 정규식</h2>
+				</header>
+				<div class="col-md-8">
+
+					<div style="display: flex; gap: 10px; /* 텍스트 영역 사이 간격 */	justify-content: center; /* 중앙 정렬 */">
+						<textarea class="form-control" id="source" rows="20" placeholder="Source.."
+							style="width:50%;"></textarea>
+						<textarea class="form-control" id="dest" rows="20" style="width:50%;"
+							placeholder="Result.."></textarea>
+					</div>
+					<hr>
+					<div style="margin: 10px 0;">
+						<span class="btn-primary form-control" type="button" id="regex1Btn"
+							style="text-align: center;">1) 찾을말 : ^(.*) 바꿀말: '$1',</span>
+						<span class="btn-primary form-control" type="button" id="regex2Btn"
+							style="text-align: center;">2) 찾을말 : ^(.*) 바꿀말: '$1', +개행없애기</span>
+					</div>
+
+					<div style="margin: 10px 0;">
+						<span class="btn-danger form-control" type="button" id="regex3Btn"
+							style="text-align: center;">3) 찾을말 : '$1', 바꿀말: $1</span>
+						<span class="btn-danger form-control" type="button" id="regex4Btn"
+							style="text-align: center;">4) 찾을말 : '$1', 바꿀말: $1 +개행추가</span>
+					</div>
+
+
+
+
+
+					<div style="margin: 10px 0;">
+						<span class="btn-primary form-control" type="button" id="regex5Btn"
+							style="text-align: center;">5) 찾을말 : , 바꿀말: \t</span>
+						<span class="btn-danger form-control" type="button" id="regex6Btn"
+							style="text-align: center;">6) 찾을말 : \t 바꿀말: ,</span>
+					</div>
+
+
+
+					<!--<div style="margin: 10px 0;" >
+						<span class="btn-primary form-control" type="button" id="regex7Btn"
+							style="text-align: center;">7) 찾을말 : 숫자 바꿀말: "숫자","07","s22239"</span>
+						<span class="btn-primary form-control" type="button" id="regex8Btn"
+							style="text-align: center;">8) 찾을말 : 숫자 바꿀말: "숫자","09","s22239"</span>
+						<div>ordeno,status,usercode</div>
+					</div>-->
+
+					<div style="margin: 10px 0;">
+						<span class="btn-primary form-control" type="button" id="regex9Btn"
+							style="text-align: center;">9) 개행기준 중복제거</span>
+						<span class="btn-default form-control" type="button" id="clearBtn" data-detect="clear"
+							style="text-align: center;">Clear</span>
+					</div>
+
+				</div>
+
+			</section>
+		</div>
+	</section>
+	<!-- Vendor -->
+	<script src="assets/vendor/jquery/jquery.js"></script>
+	<script src="assets/vendor/jquery-browser-mobile/jquery.browser.mobile.js"></script>
+	<script src="assets/vendor/bootstrap/js/bootstrap.js"></script>
+	<script src="assets/vendor/nanoscroller/nanoscroller.js"></script>
+
+	<!-- Specific Page Vendor -->
+	<script src="assets/vendor/jquery-ui/jquery-ui.js"></script>
+	<script src="assets/vendor/jqueryui-touch-punch/jqueryui-touch-punch.js"></script>
+	<script src="assets/vendor/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script>
+
+
+	<!-- Theme Base, Components and Settings -->
+	<script src="assets/javascripts/theme.js"></script>
+
+	<!-- Theme Custom -->
+	<script src="assets/javascripts/theme.custom.js"></script>
+
+	<!-- Theme Initialization Files -->
+	<script src="assets/javascripts/theme.init.js"></script>
+</body>
+<script>
+	// 입력과 출력 요소 가져오기
+	const sourceElement = $("#source");
+	const destElement = $("#dest");
+
+	// 버튼 초기화: 입력과 출력 필드 초기화
+	$('#clearBtn').click(() => {
+		sourceElement.val("");
+		destElement.val("");
+	});
+
+	// 변환 함수 실행기
+	function runTransformation(transformation) {
+		const inputText = sourceElement.val();
+		const result = transformation(inputText);
+		destElement.val(result);
+	}
+
+	// 정규식 변환 함수 모음
+	const transformations = {
+		regex1: str => str.replace(/^(.*)/gm, "'$1',"), // 각 줄의 시작과 끝을 작은따옴표로 감싸기
+		regex2: str => str.replace(/^(.*)/gm, "'$1',").replace(/\n/g, ''), // 작은따옴표 감싸고 개행 제거
+		regex3: str => str.replace(/'([^']*)',/g, '$1'), // 작은따옴표 제거
+		regex4: str => str.replace(/'([^']*)',/g, '$1\n'), // 작은따옴표 제거 후 개행 추가
+		regex5: str => str.replace(/,/g, '\t'), // 쉼표를 탭으로 변환
+		regex6: str => str.replace(/\t/g, ','), // 탭을 쉼표로 변환
+		regex7: str => str.replace(/\b\d+\b/g, '"$&","07","s22239"'), // 숫자를 변환
+		regex8: str => str.replace(/\b\d+\b/g, '"$&","09","s22239"'), // 숫자를 다른 형식으로 변환
+		regex9: str => Array.from(new Set(str.split('\n').filter(value => value.trim() !== ''))).join('\n'), // 중복 제거
+		changeFirstLower: str => changeFirstLetter(str, char => char.toLowerCase()), // 첫 글자를 소문자로 변환
+		changeFirstUpper: str => changeFirstLetter(str, char => char.toUpperCase()) // 첫 글자를 대문자로 변환
+	};
+
+	// 첫 글자 변환 함수 (소문자/대문자 변환)
+	function changeFirstLetter(str, transformFunc) {
+		return str.split('\n')
+			.map(line => line ? transformFunc(line[0]) + line.slice(1) : '')
+			.join('\n');
+	}
+
+	// 버튼 클릭 시 각 변환 함수 호출
+	$("#regex1Btn").click(() => runTransformation(transformations.regex1));
+	$("#regex2Btn").click(() => runTransformation(transformations.regex2));
+	$("#regex3Btn").click(() => runTransformation(transformations.regex3));
+	$("#regex4Btn").click(() => runTransformation(transformations.regex4));
+	$("#regex5Btn").click(() => runTransformation(transformations.regex5));
+	$("#regex6Btn").click(() => runTransformation(transformations.regex6));
+	$("#regex7Btn").click(() => runTransformation(transformations.regex7));
+	$("#regex8Btn").click(() => runTransformation(transformations.regex8));
+	$("#regex9Btn").click(() => runTransformation(transformations.regex9));
+
+</script>
+
+</html>

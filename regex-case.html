@@ -252,9 +252,9 @@
 										</a>
 									</li>
 									<li>
-										<a href="change-simple-regex.html">
+										<a href="regex-case.html">
 											<i class="fa fa-folder" aria-hidden="true"></i>
-											<span>간단한 정규식</span>
+											<span >정규식 케이스별 변경</span>
 										</a>
 									</li>
 								</ul>	
@@ -280,7 +280,7 @@
 
 				<section role="main" class="content-body">
 					<header class="page-header">
-						<h2>문자 케이스 변경</h2>
+						<h2>정규식 케이스별 변경</h2>
 					</header>
                     <div class="col-md-8">
 	
@@ -289,35 +289,52 @@
 						<hr>
 						<div style="margin: 10px 0;">
 							<span class="btn-primary form-control" type="button" id="formattingBtn" onclick="changeCamel();"
-                        		style="text-align: center;">Upper Snake to Camel </span>
-							<div style="text-align:center;">ex. YOU_ARE_AMAZING > youAreAmazing</div>
-						</div><hr>
-						<div style="margin: 10px 0;">
-							<span class="btn-success form-control" type="button" id="formattingBtn" onclick="changeUpperSnake();"
-                        		style="text-align: center;">Camel to Upper Snake</span>
-							<div style="text-align:center;">ex. youAreAmazing > YOU_ARE_AMAZING</div>
-						</div> 
-						<div style="margin: 10px 0;">
-							<span class="btn-success form-control" type="button" id="formattingBtn" onclick="changeLowerSnake();"
-                        	style="text-align: center;">Camel to Snake </span>
-							<div style="text-align:center;">ex. youAreAmazing > you_are_amazing</div>
+                        		style="text-align: center;">^(.*) > '$1'</span>
+							<div style="text-align:center;">ex. 1234 > '1234',</div>
 						</div>
 						<div style="margin: 10px 0;">
-							<span class="btn-success form-control" type="button" id="formattingBtn" onclick="changeKebab();"
-                        		style="text-align: center;">Camel to Kebab </span>
-							<div style="text-align:center;">ex. youAreAmazing > you-are-amazing</div>
+							<span class="btn-primary form-control" type="button" id="formattingBtn" onclick="changeCamel();"
+                        		style="text-align: center;">^'(.*)', > $1</span>
+							<div style="text-align:center;">ex. '1234', > 1234</div>
 						</div>
+						
 						<hr>
 						<div style="margin: 10px 0;">
-							<span class="btn-warning form-control" type="button" id="formattingBtn" onclick="changeFirstUpper();"
-								style="text-align: center;">Camel to Pascal</span>
-							<div style="text-align:center;">ex. youAreAmazing > YouAreAmazing</div>
+							<span class="btn-success form-control" type="button" id="formattingBtn" onclick="changeUpperSnake();"
+                        		style="text-align: center;">\n\n > \n</span>
+							<div style="text-align:center;">ex. 공백두줄 > 공백한줄</div>
+						</div> 
+						<div style="margin: 10px 0;">
+							<span class="btn-success form-control" type="button" id="formattingBtn" onclick="changeUpperSnake();"
+                        		style="text-align: center;">\n > \n\n</span>
+							<div style="text-align:center;">ex. 공백한줄 > 공백두줄</div>
+						</div> 
+						<hr>
+
+						<div style="margin: 10px 0;">
+							<span class="btn-warning form-control" type="button" id="formattingBtn" onclick="changeLowerSnake();"
+                        	style="text-align: center;">,기준 여러 줄을 한 줄로 - ,\n > ,</span>
+							<div style="text-align:center;">ex. ,개행 > , </div>
 						</div>
 						<div style="margin: 10px 0;">
-							<span class="btn-warning form-control" type="button" id="formattingBtn" onclick="changeFirstLower();"
-								style="text-align: center;">Pascal to Camel</span>
-							<div style="text-align:center;">ex. YouAreAmazing > youAreAmazing</div>
-						</div><hr>
+							<span class="btn-warning form-control" type="button" id="formattingBtn" onclick="changeLowerSnake();"
+                        	style="text-align: center;">,기준 한 줄을 여러 줄로 - , > ,\n</span>
+							<div style="text-align:center;">ex. , > ,개행 </div>
+						</div>
+						<hr>
+
+						<div style="margin: 10px 0;">
+							<span class="btn-success form-control" type="button" id="formattingBtn" onclick="changeUpperSnake();"
+                        		style="text-align: center;">CJ렌탈 일일업무 part1-1 - ^(.*)\t(.*) > update rental.dbo.asset set cont_no = '$1' where asst_no = '$2';</span>
+							<div style="text-align:center;">ex. O24090006634	2410049169 > update rental.dbo.asset set cont_no = 'O24090006634' where asst_no = '2410049169';</div>
+						</div> 
+						<div style="margin: 10px 0;">
+							<span class="btn-success form-control" type="button" id="formattingBtn" onclick="changeUpperSnake();"
+                        		style="text-align: center;">CJ렌탈 일일업무 part1-2 - ^(.*)\t(.*) > select cont_no from rental.dbo.asset where asst_no = '$2';</span>
+							<div style="text-align:center;">ex. O24090006634	2410049169 > select cont_no from rental.dbo.asset where asst_no = '2410049169';</div>
+						</div>
+						<hr>
+
 						<div style="margin: 10px 0;">
 							<span class="btn-default form-control" type="button" id="clearBtn" data-detect="clear"
                         		style="text-align: center;">Clear</span>
