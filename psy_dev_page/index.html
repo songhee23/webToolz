@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrowthMind - 심리적 성장 도구 개발 프로젝트</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1><i class="fas fa-brain"></i> GrowthMind</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#overview">개요</a></li>
+                <li><a href="#research">연구</a></li>
+                <li><a href="#solution">솔루션</a></li>
+                <li><a href="#applications">적용분야</a></li>
+                <li><a href="#roadmap">로드맵</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h1>심리적 성장과 웰빙을 위한 혁신적 플랫폼</h1>
+                <p>강점 강화와 약점 보완을 통한 개인 맞춤형 성장 여정</p>
+                <div class="hero-buttons">
+                    <button class="btn primary">솔루션 알아보기</button>
+                    <button class="btn secondary">연구 결과 보기</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://via.placeholder.com/600x400" alt="심리적 성장 도구 개념도">
+            </div>
+        </section>
+
+        <section id="overview" class="section">
+            <div class="container">
+                <h2 class="section-title">프로젝트 개요</h2>
+                <div class="section-divider"></div>
+                <p class="section-description">
+                    GrowthMind 프로젝트는 개인의 심리적 강점을 강화하고 약점을 보완하여 전반적인 웰빙을 증진하는 
+                    통합적 디지털 플랫폼 개발을 목표로 합니다. 최신 심리학 이론과 기술을 결합하여 자살률 감소와 
+                    정신 건강 증진에 기여하고자 합니다.
+                </p>
+                
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="stat-number">800M+</div>
+                        <div class="stat-label">전 세계 정신 건강 문제 경험자</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">76-85%</div>
+                        <div class="stat-label">정신 건강 서비스 접근성 격차</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">20.5%</div>
+                        <div class="stat-label">디지털 멘탈헬스 시장 연간 성장률</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">40%</div>
+                        <div class="stat-label">코로나19 이후 정신 건강 문제 증가율</div>
+                    </div>
+                </div>
+
+                <div class="goals-container">
+                    <h3>핵심 목표</h3>
+                    <div class="goals-grid">
+                        <div class="goal-item">
+                            <i class="fas fa-medal"></i>
+                            <h4>강점 기반 접근법 개발</h4>
+                            <p>개인의 심리적 강점을 파악하고 이를 강화하는 방법론 개발</p>
+                        </div>
+                        <div class="goal-item">
+                            <i class="fas fa-tools"></i>
+                            <h4>약점 보완 전략 수립</h4>
+                            <p>개인의 약점을 효과적으로 관리하고 보완하는 전략 구축</p>
+                        </div>
+                        <div class="goal-item">
+                            <i class="fas fa-life-ring"></i>
+                            <h4>자살 예방 기여</h4>
+                            <p>심리적 위기 감지 및 개입을 통한 자살률 감소에 기여</p>
+                        </div>
+                        <div class="goal-item">
+                            <i class="fas fa-universal-access"></i>
+                            <h4>접근성 향상</h4>
+                            <p>디지털 기술을 활용하여 심리 지원 서비스의 접근성 확대</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="research" class="section gray-bg">
+            <div class="container">
+                <h2 class="section-title">연구 결과</h2>
+                <div class="section-divider"></div>
+                
+                <div class="research-grid">
+                    <div class="research-item">
+                        <h3>심리학적 이론 통합</h3>
+                        <ul class="research-list">
+                            <li>긍정 심리학 (강점, PERMA 모델)</li>
+                            <li>인지행동치료 (CBT)</li>
+                            <li>변증법적 행동치료 (DBT)</li>
+                            <li>수용전념치료 (ACT)</li>
+                            <li>성격 유형 이론</li>
+                        </ul>
+                    </div>
+                    <div class="research-item">
+                        <h3>통합적 성장 모델</h3>
+                        <div class="model-container">
+                            <div class="model-item">자기 인식</div>
+                            <div class="model-item">심리적 유연성</div>
+                            <div class="model-item">인지적 재구성</div>
+                            <div class="model-item">정서 조절</div>
+                            <div class="model-item">목적 지향적 행동</div>
+                        </div>
+                    </div>
+                    <div class="research-item">
+                        <h3>기존 서비스 분석</h3>
+                        <div class="market-item">
+                            <h4>모바일 앱 기반 솔루션</h4>
+                            <p>마음챙김, 기분 추적, 습관 형성 앱</p>
+                        </div>
+                        <div class="market-item">
+                            <h4>웹 플랫폼</h4>
+                            <p>온라인 상담, 교육, 자가 평가 플랫폼</p>
+                        </div>
+                        <div class="market-item">
+                            <h4>임상 서비스</h4>
+                            <p>임상적 심리 치료 및 중재 프로그램</p>
+                        </div>
+                    </div>
+                    <div class="research-item">
+                        <h3>혁신 기회</h3>
+                        <div class="opportunity-container">
+                            <div class="opportunity-item">통합적 접근 부족</div>
+                            <div class="opportunity-item">개인화 한계</div>
+                            <div class="opportunity-item">지속적 참여 어려움</div>
+                            <div class="opportunity-item">데이터 기반 접근 미흡</div>
+                            <div class="opportunity-item">생태계 연결성 부재</div>
+                            <div class="opportunity-item">예방적 접근 미약</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="user-needs">
+                    <h3>핵심 사용자 니즈</h3>
+                    <div class="needs-grid">
+                        <div class="need-item">
+                            <i class="fas fa-user-check"></i>
+                            <h4>자기 이해 및 성장</h4>
+                        </div>
+                        <div class="need-item">
+                            <i class="fas fa-heart"></i>
+                            <h4>정서적 웰빙</h4>
+                        </div>
+                        <div class="need-item">
+                            <i class="fas fa-people-arrows"></i>
+                            <h4>관계 개선</h4>
+                        </div>
+                        <div class="need-item">
+                            <i class="fas fa-compass"></i>
+                            <h4>목적 및 의미</h4>
+                        </div>
+                        <div class="need-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <h4>위기 관리</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="solution" class="section">
+            <div class="container">
+                <h2 class="section-title">GrowthMind 플랫폼</h2>
+                <div class="section-divider"></div>
+                <p class="section-description">
+                    연구 결과를 바탕으로, 'GrowthMind'라는 통합 디지털 플랫폼을 제안합니다. 이 혁신적인 솔루션은 
+                    다양한 심리학적 접근법을 통합하여 개인화된 심리적 성장 경험을 제공합니다.
+                </p>
+                
+                <div class="principles-container">
+                    <h3>핵심 원칙</h3>
+                    <div class="principles-grid">
+                        <div class="principle-item">
+                            <i class="fas fa-bezier-curve"></i>
+                            <span>통합적 접근</span>
+                        </div>
+                        <div class="principle-item">
+                            <i class="fas fa-fingerprint"></i>
+                            <span>개인화</span>
+                        </div>
+                        <div class="principle-item">
+                            <i class="fas fa-sync-alt"></i>
+                            <span>적응형 학습</span>
+                        </div>
+                        <div class="principle-item">
+                            <i class="fas fa-hand-holding-heart"></i>
+                            <span>실행 가능성</span>
+                        </div>
+                        <div class="principle-item">
+                            <i class="fas fa-database"></i>
+                            <span>데이터 기반</span>
+                        </div>
+                        <div class="principle-item">
+                            <i class="fas fa-network-wired"></i>
+                            <span>생태계 연결</span>
+                        </div>
+                        <div class="principle-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>안전 우선</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="features-container">
+                    <h3>주요 기능 및 모듈</h3>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-id-card"></i>
+                            </div>
+                            <h4>개인 프로필 및 평가</h4>
+                            <p>종합적 심리 평가, 동적 프로필 대시보드, 맞춤형 성장 로드맵</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <h4>성장 엔진</h4>
+                            <p>AI 기반 맞춤형 활동, 적응형 학습 경로, 다양한 심리학적 접근법 통합</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-calendar-day"></i>
+                            </div>
+                            <h4>일상 통합 시스템</h4>
+                            <p>마이크로 성장 활동, 습관 형성 지원, 상황별 맞춤 개입</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-heartbeat"></i>
+                            </div>
+                            <h4>정서 관리 허브</h4>
+                            <p>실시간 감정 추적 및 패턴 분석, 맞춤형 정서 조절 전략, 마음챙김 가이드</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h4>관계 역량 개발</h4>
+                            <p>의사소통 기술 훈련, 관계 패턴 분석, 공감 능력 개발 활동</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-compass"></i>
+                            </div>
+                            <h4>목적 및 의미 탐색</h4>
+                            <p>가치 명확화 워크숍, 의미 중심 목표 설정, 성취 축하 시스템</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-life-ring"></i>
+                            </div>
+                            <h4>안전망 시스템</h4>
+                            <p>위험 징후 감지 알고리즘, 단계적 개입 프로토콜, 전문가 연결</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-hands-helping"></i>
+                            </div>
+                            <h4>커뮤니티 및 지원</h4>
+                            <p>또래 지원 그룹, 멘토링 매칭, 익명 공유 및 집단 지혜 활용</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="demo-container" id="interactive-demo">
+                    <h3>자가 진단 체험해보기</h3>
+                    <p class="demo-description">아래 간단한 항목들에 응답하여 당신의 심리적 강점 영역을 확인해보세요.</p>
+                    <div class="assessment-tool">
+                        <div class="assessment-progress">
+                            <div class="progress-bar">
+                                <div class="progress-indicator" id="progress-indicator"></div>
+                            </div>
+                            <div class="progress-text">문항 <span id="current-question">1</span>/<span id="total-questions">5</span></div>
+                        </div>
+                        
+                        <div id="question-container" class="question-container">
+                            <div class="question-card active" data-question="1">
+                                <h4>나는 스트레스 상황에서도 긍정적인 면을 찾으려고 노력한다.</h4>
+                                <div class="answer-options">
+                                    <label class="answer-option">
+                                        <input type="radio" name="q1" value="1"> 전혀 그렇지 않다
+                                    </label>
+                                    <label class="answer-option">
+                                        <input type="radio" name="q1" value="2"> 그렇지 않은 편이다
+                                    </label>
+                                    <label class="answer-option">
+                                        <input type="radio" name="q1" value="3"> 보통이다
+                                    </label>
+                                    <label class="answer-option">
+                                        <input type="radio" name="q1" value="4"> 그런 편이다
+                                    </label>
+                                    <label class="answer-option">
+                                        <input type="radio" name="q1" value="5"> 매우 그렇다
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="question-card" data-question="2">
+                                <h4>나는 다른 사람의 감정과 관점을 이해하는 것이 중요하다고 생각한다.</h4>
+                                <div class="answer-options">
+                                    <label class="answer-option">
+                                        <input type="radio" name="q2" value="1"> 전혀 그렇지 않다
+                                    </label>
+                                    <label class="answer-option">
+                                        <input type="radio" name="q2" value="2"> 그렇지 않은 편이다
+                                    </label>
+                                    <label class="answer-option">
+                                        <input type="radio" name="q2" value="3"> 보통이다
+                                    </label>
+                                    <label class="answer-option">
+                                        <input type="radio" name="q2" value="4"> 그런 편이다
+                                    </label>
+                                    <label class="answer-option">
+                                        <input type="radio" name="q2" value="5"> 매우 그렇다
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="question-card" data-question="3">
+                                <h4>나는 목표를 세우고 그것을 달성하기 위해 계획적으로 행동한다.</h4>
+                                <div class="answer-options">
+                                    <label class="answer-option">
+                                        <input type="radio" name="q3" value="1"> 전혀 그렇지 않다
+                                    </label>
+                                    <label class="answer-option">
+                                        <input type="radio" name="q3" value="2"> 그렇지 않은 편이다
+                                    </label>
+                                    <label class="answer-option">
+                                        <input type="radio" name="q3" value="3"> 보통이다
+                                    </label>
+                                    <label class="answer-option">
+                                        <input type="radio" name="q3" value="4"> 그런 편이다
+                                    </label>
+                                    <label class="answer-option">
+                                        <input type="radio" name="q3" value="5"> 매우 그렇다
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="question-card" data-question="4">
+                                <h4>어려운 상황에서도 나는 내 감정을 잘 조절할 수 있다.</h4>
+                                <div class="answer-options">
+                                    <label class="answer-option">
+                                        <input type="radio" name="q4" value="1"> 전혀 그렇지 않다
+                                    </label>
+                                    <label class="answer-option">
+                                        <input type="radio" name="q4" value="2"> 그렇지 않은 편이다
+                                    </label>
+                                    <label class="answer-option">
+                                        <input type="radio" name="q4" value="3"> 보통이다
+                                    </label>
+                                    <label class="answer-option">
+                                        <input type="radio" name="q4" value="4"> 그런 편이다
+                                    </label>
+                                    <label class="answer-option">
+                                        <input type="radio" name="q4" value="5"> 매우 그렇다
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="question-card" data-question="5">
+                                <h4>나는 새로운 지식과 기술을 배우는 것을 즐긴다.</h4>
+                                <div class="answer-options">
+                                    <label class="answer-option">
+                                        <input type="radio" name="q5" value="1"> 전혀 그렇지 않다
+                                    </label>
+                                    <label class="answer-option">
+                                        <input type="radio" name="q5" value="2"> 그렇지 않은 편이다
+                                    </label>
+                                    <label class="answer-option">
+                                        <input type="radio" name="q5" value="3"> 보통이다
+                                    </label>
+                                    <label class="answer-option">
+                                        <input type="radio" name="q5" value="4"> 그런 편이다
+                                    </label>
+                                    <label class="answer-option">
+                                        <input type="radio" name="q5" value="5"> 매우 그렇다
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="assessment-navigation">
+                            <button id="prev-button" class="nav-button" disabled>이전</button>
+                            <button id="next-button" class="nav-button primary">다음</button>
+                            <button id="submit-button" class="nav-button primary" style="display: none;">결과 보기</button>
+                        </div>
+                        
+                        <div id="results-container" class="results-container" style="display: none;">
+                            <h3>당신의 심리적 강점 영역</h3>
+                            <div class="results-chart-container">
+                                <canvas id="results-chart"></canvas>
+                            </div>
+                            <div class="results-summary">
+                                <div id="primary-strength" class="strength-card">
+                                    <h4>주요 강점</h4>
+                                    <p id="primary-strength-text"></p>
+                                </div>
+                                <div id="growth-opportunities" class="strength-card">
+                                    <h4>성장 기회</h4>
+                                    <p id="growth-opportunities-text"></p>
+                                </div>
+                            </div>
+                            <div class="results-actions">
+                                <button id="restart-assessment" class="btn primary">다시 평가하기</button>
+                                <button id="explore-platform" class="btn secondary">GrowthMind 더 알아보기</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <section id="applications" class="section gray-bg">
+        <div class="container">
+            <h2 class="section-title">적용 분야</h2>
+            <div class="section-divider"></div>
+            <p class="section-description">
+                GrowthMind 플랫폼은 다양한 사회 영역과 생활 방식에 적용되어 개인과 조직의 성장을 지원합니다.
+            </p>
+
+            <div class="tabs-container">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-tab="tab-education">교육 분야</button>
+                    <button class="tab-btn" data-tab="tab-corporate">기업/조직 분야</button>
+                    <button class="tab-btn" data-tab="tab-clinical">임상/상담 분야</button>
+                    <button class="tab-btn" data-tab="tab-personal">개인/일상 분야</button>
+                </div>
+
+                <div class="tab-content">
+                    <div id="tab-education" class="tab-pane active">
+                        <div class="application-content">
+                            <div class="application-image">
+                                <img src="/api/placeholder/500/350" alt="교육 분야 적용">
+                            </div>
+                            <div class="application-text">
+                                <h3>교육적 성장을 위한 지원</h3>
+                                <p>교육 영역에서 GrowthMind는 학생들의 심리적 성장과 학업 성취를 통합적으로 지원합니다. 생애부터 고등교육까지 전 단계에서 활용 가능합니다.</p>
+                                <ul class="application-list">
+                                    <li><i class="fas fa-check-circle"></i> 성장 마인드셋 교육 지원</li>
+                                    <li><i class="fas fa-check-circle"></i> 사회성 및 정서지능 향상 프로그램</li>
+                                    <li><i class="fas fa-check-circle"></i> 학업 스트레스 및 불안 관리 도구</li>
+                                    <li><i class="fas fa-check-circle"></i> 교사 및 교육계 전문가를 위한 지원 자료</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="tab-corporate" class="tab-pane">
+                        <div class="application-content">
+                            <div class="application-image">
+                                <img src="/api/placeholder/500/350" alt="기업 분야 적용">
+                            </div>
+                            <div class="application-text">
+                                <h3>기업 및 조직 환경을 위한 솔루션</h3>
+                                <p>조직 내에서 GrowthMind는 직원들의 웬빙과 생산성을 동시에 향상시키며, 팀워크와 조직 문화를 개선합니다.</p>
+                                <ul class="application-list">
+                                    <li><i class="fas fa-check-circle"></i> 리더십 및 관리자 역량 강화</li>
+                                    <li><i class="fas fa-check-circle"></i> 마인풀니스 기반 스트레스 관리</li>
+                                    <li><i class="fas fa-check-circle"></i> 파트너십 및 협업 스킬 개발</li>
+                                    <li><i class="fas fa-check-circle"></i> 크로스팁션널 팀 다양성 수용</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="tab-clinical" class="tab-pane">
+                        <div class="application-content">
+                            <div class="application-image">
+                                <img src="/api/placeholder/500/350" alt="임상 분야 적용">
+                            </div>
+                            <div class="application-text">
+                                <h3>임상 및 상담 현장을 위한 도구</h3>
+                                <p>GrowthMind는 전문적인 심리 서비스와 후공응장애 치료 환경을 위한 흐름을 개선하고 맞춤형 개입 방식을 지원합니다.</p>
+                                <ul class="application-list">
+                                    <li><i class="fas fa-check-circle"></i> 임상적 접근법의 디지털 통합</li>
+                                    <li><i class="fas fa-check-circle"></i> 환자 진행 과정 추적 및 시각화</li>
+                                    <li><i class="fas fa-check-circle"></i> 화상 치료 모듈 및 진단 지원</li>
+                                    <li><i class="fas fa-check-circle"></i> 전문가-환자 상호작용 보조</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="tab-personal" class="tab-pane">
+                        <div class="application-content">
+                            <div class="application-image">
+                                <img src="/api/placeholder/500/350" alt="개인 분야 적용">
+                            </div>
+                            <div class="application-text">
+                                <h3>개인 일상 생활의 성장</h3>
+                                <p>GrowthMind는 개인들이 일상 생활에서 자기 지식과 정서적 우리를 발전시키며 개인적 목표를 효과적으로 달성할 수 있도록 독량을 제공합니다.</p>
+                                <ul class="application-list">
+                                    <li><i class="fas fa-check-circle"></i> 자기 발견 및 인생 계획 지원</li>
+                                    <li><i class="fas fa-check-circle"></i> 정서 지능 및 부정적 생각 관리</li>
+                                    <li><i class="fas fa-check-circle"></i> 인간관계 향상 및 의사소통 독량</li>
+                                    <li><i class="fas fa-check-circle"></i> 인생의 의미와 주제성 개발</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cta-container">
+                <h3>당신의 분야에 맞게 GrowthMind를 적용해보세요</h3>
+                <button class="btn primary">상담 문의하기</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="roadmap" class="section">
+        <div class="container">
+            <h2 class="section-title">긜개 로드맵</h2>
+            <div class="section-divider"></div>
+            <p class="section-description">
+                GrowthMind 플랫폼은 지속적인 발전과 개선을 통해 더 나은 서비스를 제공하기 위해 노력하고 있습니다.
+            </p>
+            
+            <div class="roadmap-timeline">
+                <div class="timeline-container">
+                    <div class="timeline-item">
+                        <div class="timeline-content current">
+                            <div class="timeline-date">2025 Q1-Q2</div>
+                            <div class="timeline-marker"></div>
+                            <h3>알파 버전 출시</h3>
+                            <ul>
+                                <li>핵심 기능 및 사용자 플로우 완성</li>
+                                <li>기본 평가 투롤 시스템 구축</li>
+                                <li>신뢰할 수 있는 데이터 보호 방식 구현</li>
+                                <li>단계적 사용자 테스트 및 피드백 수집</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-date">2025 Q3-Q4</div>
+                            <div class="timeline-marker"></div>
+                            <h3>베타 버전 및 원플 테스트</h3>
+                            <ul>
+                                <li>확장된 평가 도구 및 성장 엔진 구현</li>
+                                <li>단계적 상호작용 시스템 및 시각화 투롤</li>
+                                <li>파일러트 그룹 응용 시나리오 테스트</li>
+                                <li>기본 임상 접근법 통합 및 검증</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-date">2026 Q1-Q2</div>
+                            <div class="timeline-marker"></div>
+                            <h3>정식 출시 및 사용자 확장</h3>
+                            <ul>
+                                <li>전체 기능 통합 및 완성</li>
+                                <li>고도화된 AI 기반 성장 언어화 알고리즘 구현</li>
+                                <li>응용 분야별 특화 파트너 네트워크 구축</li>
+                                <li>개발자 API 및 인프라 확장</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-date">2026 Q3-2027</div>
+                            <div class="timeline-marker"></div>
+                            <h3>생태계 확장 및 글로벌 확장</h3>
+                            <ul>
+                                <li>글로벌 지역별 확장 및 다국어 지원</li>
+                                <li>상호작용형 생태계 파트너십 구축</li>
+                                <li>웨어러블 및 IoT 기기 통합</li>
+                                <li>산업 별 해결책 및 플랫폼 버전 출시</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="join-beta">
+                <h3>곧 출시될 알파 버전에 참여하세요</h3>
+                <p>개발 단계부터 참여하여 GrowthMind의 미래를 함께 만들어보세요.</p>
+                <div class="join-form">
+                    <input type="email" placeholder="이메일 주소" class="email-input">
+                    <button class="btn primary">베타 참여 신청</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2><i class="fas fa-brain"></i> GrowthMind</h2>
+                    <p>심리적 성장과 웰빙을 위한 혁신적 플랫폼</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>프로젝트</h3>
+                        <ul>
+                            <li><a href="#overview">개요</a></li>
+                            <li><a href="#research">연구</a></li>
+                            <li><a href="#solution">솔루션</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>리소스</h3>
+                        <ul>
+                            <li><a href="#">연구 문서</a></li>
+                            <li><a href="#">기술 사양</a></li>
+                            <li><a href="#">사례 연구</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>연락처</h3>
+                        <ul>
+                            <li><a href="#"><i class="fas fa-envelope"></i> info@growthmind.org</a></li>
+                            <li><a href="#"><i class="fas fa-phone"></i> +82 10-1234-5678</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 GrowthMind 프로젝트. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
