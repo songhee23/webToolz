@@ -1,0 +1,28 @@
+{
+  "sheets": [
+    "알고리즘",
+    "AI",
+    "CAOS",
+    "DB",
+    "NW",
+    "소공",
+    "DS",
+    "IT경영",
+    "보안",
+    "법률",
+    "참고개념도"
+  ],
+  "paths": {
+    "알고리즘": "web_app/data/알고리즘.json",
+    "AI": "web_app/data/AI.json",
+    "CAOS": "web_app/data/CAOS.json",
+    "DB": "web_app/data/DB.json",
+    "NW": "web_app/data/NW.json",
+    "소공": "web_app/data/소공.json",
+    "DS": "web_app/data/DS.json",
+    "IT경영": "web_app/data/IT경영.json",
+    "보안": "web_app/data/보안.json",
+    "법률": "web_app/data/법률.json",
+    "참고개념도": "web_app/data/참고개념도.json"
+  }
+}

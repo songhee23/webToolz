@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기술사 서브노트 토픽 검색</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>기술사 서브노트 토픽 검색</h1>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="토픽 또는 키워드 검색...">
+                <button id="searchButton"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="filter-container">
+                <div class="subject-filter">
+                    <label for="subjectSelect">과목 선택:</label>
+                    <select id="subjectSelect">
+                        <option value="all">전체 과목</option>
+                        <!-- 여기에 과목 옵션들이 동적으로 추가됩니다 -->
+                    </select>
+                </div>
+                <div class="mode-toggle">
+                    <label class="switch">
+                        <input type="checkbox" id="viewMode">
+                        <span class="slider round"></span>
+                    </label>
+                    <span id="viewModeText">요약 보기</span>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="results-info">
+                <span id="resultsCount">검색 결과: 0개</span>
+                <div class="sort-options">
+                    <label for="sortSelect">정렬:</label>
+                    <select id="sortSelect">
+                        <option value="topic">토픽</option>
+                        <option value="relevance">관련성</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div id="searchResults" class="search-results">
+                <!-- 검색 결과가 여기에 표시됩니다 -->
+                <div class="welcome-message">
+                    <i class="fas fa-book-open fa-3x"></i>
+                    <h2>원하는 토픽이나 키워드를 검색하세요</h2>
+                    <p>기술사 서브노트의 토픽, 키워드, 정의, 내용을 검색할 수 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="paginationControls" class="pagination-controls">
+                <!-- 페이지네이션 컨트롤이 여기에 표시됩니다 -->
+            </div>
+        </main>
+
+        <div id="topicModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div id="modalContent">
+                    <!-- 토픽 상세 정보가 여기에 표시됩니다 -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 기술사 서브노트 검색 시스템</p>
+    </footer>
+
+    <script src="js/data-loader.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/ui.js"></script>
+</body>
+</html>
